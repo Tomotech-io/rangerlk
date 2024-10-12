@@ -1736,3 +1736,55 @@ section,
   height: 20px; /* Adjust the logo size */
   margin-right: 10px; /* Space between logo and text */
 }
+
+.cards .card {
+  /* margin: 15px; */
+  /* margin-bottom: 30px; */
+  padding: 20px;
+  background-color: #ffffff;
+  /* border-radius: 10px; */
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards .card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.cards .card a:hover {
+  color: #fff;
+}
+
+.cards .card:hover {
+  background-color: #ccb116; /* Your hover color */
+  color: #fff;
+  transform: translateY(-10px); /* Lift on hover */
+}
+
+.cards .card:hover span,
+.cards .card:hover h4,
+.cards .card:hover p {
+  color: #fff;
+}
+
+.cards .card span {
+  font-size: 2rem;
+  color: #ccb116;
+  font-weight: bold;
+}
+
+.cards .card h4 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.cards .card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}

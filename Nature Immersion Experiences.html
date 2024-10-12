@@ -30,21 +30,21 @@
 
 </head>
 
-<body class="starter-page-page">
+<body class="index-page">
 
-  <header id="header" class="header sticky-top">
+  <header id="header" class="header fixed-top">
 
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@ranger.lk">info@ranger.lk</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+94 77 6771171</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
+          <a href="https://www.facebook.com/rangerlk/" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/ranger.lk/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
         </div>
       </div>
     </div><!-- End Top Bar -->
@@ -55,34 +55,35 @@
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Day</h1>
+          <h1 class="sitename">Ranger.lk</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="#adventures"><span>Adventures</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li><a href="Wildlife Tours.html">Wildlife Tours</a></li>
+                <!-- <li class="dropdown"><a href="#"><span>Photography Expeditions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Wildlife Tours</a></li>
+                    <li><a href="#">Photography Expeditions</a></li>
+                    <li><a href="#">Trekking & hiking</a></li>
+                    <li><a href="#">Adventure Tourism</a></li>
                     <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
+                <li><a href="Photography Expeditions.html">Photography Expeditions</a></li>
+                <li><a href="Trekking & Hiking.html">Trekking & hiking</a></li>
+                <li><a href="Adventure Tourism.html">Adventure Tourism</a></li>
+                <li><a href="Cultural Heritage Adventures.html">Cultural Heritage Adventures</a></li>
+                <li><a href="Nature Immersion Experiences.html">Nature Immersion Experiences</a></li>
               </ul>
+              <li><a href="index.html#portfolio">Portfolio</a></li>
+            
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -107,27 +108,48 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
+    <section id="nature-immersion-section" class="nature-immersion-section section" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center;">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Starter Section<br></span>
-        <h2>Starter Section</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <!-- Section Title (Heading on Top) -->
+      <div class="container section-title" data-aos="fade-up" style="text-align: center; margin-bottom: 30px;">
+        <span>Nature Immersion Experiences<br></span>
+        <h2>Nature Immersion Experiences</h2>
+        <p>Explore the serene beauty of Sri Lanka's natural landscapes with our curated nature experiences. From tranquil lakes to dense jungles, each journey reconnects you with the tranquility of the outdoors.</p>
       </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
-      </div>
-
-    </section><!-- /Starter Section Section -->
+    
+      <!-- Content Section with Image and Text Side by Side -->
+      <div class="container" data-aos="fade-up" style="flex-grow: 1;">
+        <div class="row d-flex align-items-center">
+          <!-- Image Column -->
+          <div class="col-md-6 text-center">
+            <img src="assets/img/Adventures/Nature Immersion Experiences.jpg" alt="Nature Immersion Experiences" class="img-fluid" style="width: 500px; max-width: 100%; border-radius: 10px;">
+          </div>
+    
+          <!-- Text Description Column -->
+          <div class="col-md-6">
+            <p>Our Nature Immersion Experiences offer a unique opportunity to engage with the lush landscapes and rich biodiversity of Sri Lanka. Whether you’re wandering through serene forests or discovering hidden waterfalls, each adventure is designed to bring you closer to nature.</p>
+            <p>Join us to witness the beauty of Sri Lanka's ecosystems, learn about conservation efforts, and enjoy peaceful moments in stunning surroundings. These experiences are perfect for nature lovers and those seeking to reconnect with the great outdoors.</p>
+          </div>
+        </div>
+      </div><!-- End Content Section -->
+    
+    </section><!-- /Nature Immersion Section -->
+    
+    
+    
+    
 
   </main>
 
+</section><!-- /Contact Section -->
+<a href="https://wa.me/94776771171" class="whatsapp-button" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
+  Book Now
+</a>
+
   <footer id="footer" class="footer position-relative dark-background">
 
-    <div class="container footer-top">
+    <!-- <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6">
           <div class="footer-about">
@@ -181,16 +203,13 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Day</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>2024 Ranger.LK. All rights reserved.</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+        Web site developed by ©<a href="http://www.tomotech.lk">Tomo Technologies Pvt Ltd</a>
       </div>
     </div>
 
