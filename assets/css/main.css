@@ -57,6 +57,8 @@
   scroll-behavior: smooth;
 }
 
+
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -1706,4 +1708,31 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  left: 20px;   /* Distance from the left */
+  background-color: #25D366; /* WhatsApp color */
+  color: white;
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 30px; /* Rounder button */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  z-index: 1000; /* Ensure the button appears on top */
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Darker green on hover */
+}
+
+.whatsapp-logo {
+  width: 20px; /* Adjust the logo size */
+  height: 20px; /* Adjust the logo size */
+  margin-right: 10px; /* Space between logo and text */
 }
