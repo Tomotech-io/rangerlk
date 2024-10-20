@@ -1788,3 +1788,28 @@ section,
   font-size: 1rem;
   transition: color 0.3s ease;
 }
+
+.upcoming-events {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.upcoming-events h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.upcoming-events img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.upcoming-events p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
