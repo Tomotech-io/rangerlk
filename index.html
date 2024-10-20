@@ -1,92 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ranger.LK - Adventure and Wildlife Tours">
-    <title>Ranger.LK - Adventure and Wildlife Tours</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ranger.lk - Adventure Awaits</title>
+  <meta name="description" content="Discover the beauty of Sri Lanka through immersive wildlife tours, adventure tourism, Experience in Camping Adventures, and nature immersion experiences. Join us for unforgettable journeys that connect you with nature and culture.">
+  <meta name="keywords" content="Sri Lanka, wildlife tours, adventure tourism, trekking, hiking, cultural heritage, nature immersion, eco-tourism, travel, adventure, wildlife, photography, local experiences, natural beauty, sustainable tourism, tourism in Sri Lanka">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS and JS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- <script src="assets/js/mouse.js" defer></script> -->
+
+
 </head>
-<body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="logo" aria-label="Ranger.LK Logo">
-            <h1>Ranger.LK</h1>
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@ranger.lk">info@ranger.lk</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+94 77 6771171</span></i>
         </div>
-        <nav role="navigation" aria-label="Main Menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="wildlife-tours.html">Wildlife Tours</a></li>
-                <li><a href="photography-expeditions.html">Photography Expeditions</a></li>
-                <li><a href="trekking-hiking.html">Trekking & Hiking</a></li>
-                <li><a href="adventure-tourism.html">Adventure Tourism</a></li>
-            </ul>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
+          <a href="https://www.facebook.com/rangerlk/" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/ranger.lk/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Ranger.lk</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#upcoming-events">Upcoming Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown"><a href="#adventures"><span>Adventures</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="Wildlife Tours.html">Wildlife Tours</a></li>
+                <!-- <li class="dropdown"><a href="#"><span>Photography Expeditions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Wildlife Tours</a></li>
+                    <li><a href="#">Photography Expeditions</a></li>
+                    <li><a href="#">Trekking & hiking</a></li>
+                    <li><a href="#">Adventure Tourism</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul> -->
+                </li>
+                <li><a href="Photography Expeditions.html">Photography Expeditions</a></li>
+                <li><a href="Trekking & Hiking.html">Trekking & hiking</a></li>
+                <li><a href="Adventure Tourism.html">Adventure Tourism</a></li>
+                <li><a href="Experience Camping Adventures.html">Experience Camping Adventures</a></li>
+                <li><a href="Nature Immersion Experiences.html">Nature Immersion Experiences</a></li>
+              </ul>
+            <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+            
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-    </header>
+      </div>
 
-    <!-- Main Content (Hero Section) -->
-    <main>
-        <section class="hero" style="background-image: url('assets/images/hero-optimized.jpeg');">
-            <div class="hero-content">
-                <h2>Adventure Awaits</h2>
-                <p>Explore the beauty of Sri Lanka with Ranger.LK</p>
-                <a href="#services" class="cta-btn">Discover More</a>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+<!-- Hero Section -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-optimized.jpeg" alt="" data-aos="fade-in">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-start">
+          <div class="col-lg-8">
+            <h2>Adventure Awaits</h2>
+            <p>Explore the beauty of Sri Lanka with Ranger.LK</p>
+            <a href="#about" class="btn-get-started">Reach Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+</section><!-- /Hero Section -->
+
+
+<section id="upcoming-events" class="upcoming-events section">
+  <div class="container">
+    <div class="section-title text-center" data-aos="fade-up">
+      <h2>Upcoming Events</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+        <h3>We are celebrating - World Tourism Day 2024</h3>
+        <img src="assets/img/tourism-event.jpeg" class="img-fluid" alt="Tourism Event">
+      </div>
+    </div>
+    
+    <div class="row justify-content-center mt-3">
+      <div class="col-lg-8 text-center">
+        <p>Join us for the World Tourism Day 2024. Celebrate nature, wildlife, and cultural heritage with us at Ranger.LK. Immerse yourself in Sri Lanka’s beauty and adventure through our exclusive event offerings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Discover the Untamed Beauty of Sri Lanka<br></span>
+        <h2>Discover the Untamed Beauty of Sri Lanka<br></h2>
+        <p>At Ranger.LK, we are passionate about delivering unforgettable experiences that immerse you in the breathtaking beauty and rich biodiversity of Sri Lanka. Whether you're a nature enthusiast, adventure seeker, or wildlife lover, our tours are designed to inspire and rejuvenate your spirit. Let the wild guide your journey.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Whether you're a nature enthusiast, adventure seeker, or wildlife lover</h3>
+            <p class="fst-italic">
+              At Ranger.LK, Our tours are designed to inspire and rejuvenate your spirit. Let the wild guide your journey.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Enjoy insights from passionate guides who enhance your adventure.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Customize your tour to match your interests and skill levels.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Experience eco-friendly tourism that protects Sri Lanka’s beauty.</span></li>
+            </ul>
+            <a href="#contact" class="read-more"><span>Contact Us</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+<!-- Cards Section -->
+<section id="adventures" class="cards section">
+
+  <div class="container">
+
+    <div class="row no-gutters">
+
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="100">
+        <a href="Wildlife Tours.html">
+          <span style="font-size: 25px;font-weight: 400;">01</span>
+          <h4>Wildlife Tours</h4>
+          <p>Join us on an unforgettable journey through Sri Lanka’s lush jungles and serene wetlands. From the majestic elephants of Udawalawe to the elusive leopards of Yala, our wildlife tours offer you the chance to encounter the island’s most iconic creatures in their natural habitat. Whether you're a passionate wildlife enthusiast or simply seeking a unique adventure, let the wild inspire you.</p>
+        </a>
+      </div><!-- End Card Item -->
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="200">
+        <a href="Photography Expeditions.html">
+          <span style="font-size: 25px;font-weight: 400;">02</span>
+          <h4>Photography Expeditions</h4>
+          <p>Immerse yourself in Sri Lanka’s breathtaking landscapes and vibrant wildlife through our photography expeditions. Guided by experts, you’ll have the opportunity to frame some of the most awe-inspiring moments of the island’s beauty. From golden sunrises to the rich diversity of its wildlife, every click will tell a story. Ready your lens and capture the magic of the wild.</p>
+        </a>
+      </div><!-- End Card Item -->
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="300">
+        <a href="Trekking & Hiking.html">
+          <span style="font-size: 25px;font-weight: 400;">03</span>
+          <h4>Trekking & Hiking</h4>
+          <p>Step into the heart of Sri Lanka's lush landscapes with our trekking and hiking adventures. From the rolling hills of the Knuckles Range to the misty peaks of the Central Highlands, each journey takes you through untouched nature, offering panoramic views, hidden waterfalls, and an intimate connection with the wild. Challenge yourself, explore the uncharted, and let the wilderness guide you.</p>
+        </a>
+      </div><!-- End Card Item -->
+
+      <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
+        <a href="Adventure Tourism.html">
+          <span style="font-size: 25px;font-weight: 400;">04</span>
+          <h4>Adventure Tourism</h4>
+          <p>Our adrenaline-pumping adventure tours offer everything from forest treks to river rafting, jungle expeditions to waterfall abseiling. Experience the thrill of exploring untouched landscapes, guided by experts who ensure your safety while igniting your sense of adventure. It’s time to embrace the wild and conquer new challenges.</p>
+        </a>
+      </div><!-- End Card Item -->
+
+      <!-- Card 5 -->
+      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="500">
+        <a href="Experience Camping Adventures.html">
+          <span style="font-size: 25px;font-weight: 400;">05</span>
+          <h4>Experience Camping Adventure</h4>
+          <p>Embark on an unforgettable journey with Ranger.LK's Camping Adventures, where nature becomes your home. Nestled in the heart of Sri Lanka’s untouched landscapes, our camping experiences offer the perfect blend of adventure and tranquility. Whether you’re seeking serene nights under the stars or exploring the wilderness by day, our guided tours provide safe, eco-friendly camping in some of the island’s most scenic spots. Reconnect with nature, enjoy campfire stories, and create lasting memories on your next camping adventure with Ranger.LK!</p>
+        </a>
+      </div><!-- End Card Item -->
+
+      <!-- Card 6 -->
+      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="600">
+        <a href="Nature Immersion Experiences.html">
+          <span style="font-size: 25px;font-weight: 400;">06</span>
+          <h4>Nature Immersion Experiences</h4>
+          <p>Immerse yourself in the serene beauty of Sri Lanka's natural landscapes with our curated nature experiences. From tranquil lakes to dense jungles, each journey reconnects you with the tranquility of the outdoors.</p>
+        </a>
+      </div><!-- End Card Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Cards Section -->
+
+
+    <!-- Clients Section
+    <section id="clients" class="clients section light-background">
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Our Adventure Offerings</span>
+        <h2>Our Adventure Offerings</h2>
+        <p>Embark on thrilling adventures through Sri Lanka's stunning landscapes and vibrant wildlife, with tailored experiences for every adventure seeker.</p>
+      </div><!-- End Section Title --> 
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-person-walking"></i>
+              </div>
+              <!-- <a href="#" class="stretched-link"> -->
+                <h3>Hiking Trails</h3>
+              </a>
+              <p>Discover breathtaking hiking trails that reveal Sri Lanka's hidden gems.</p>
             </div>
-        </section>
+          </div><!-- End Service Item -->
 
-        <!-- Inspirational Text Section -->
-        <section class="inspirational-text">
-            <h2>Discover the Untamed Beauty of Sri Lanka</h2>
-            <p>At Ranger.LK, we are passionate about delivering unforgettable experiences that immerse you in the breathtaking beauty and rich biodiversity of Sri Lanka. Whether you're a nature enthusiast, adventure seeker, or wildlife lover, our tours are designed to inspire and rejuvenate your spirit. Let the wild guide your journey.</p>
-        </section>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-image-alt"></i>
+              </div>
+              <!-- <a href="#" class="stretched-link"> -->
+                <h3>Adventure Activities</h3>
+              </a>
+              <p>Dive into exhilarating adventure activities that promise unforgettable memories in Sri Lanka.</p>
+            </div>
+          </div><!-- End Service Item -->
 
-        <!-- Services Section -->
-        <section id="services" class="services">
-            <article class="service-card">
-                <a href="wildlife-tours.html">
-                    <img src="assets/images/wildlife-optimized.jpg" alt="Wildlife Tours">
-                    <h3><a href="wildlife-tours.html">Wildlife Tours</a></h3>
-                    <p>Experience Sri Lanka's rich wildlife with guided safaris.</p>
-                </a>
-            </article>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <!-- <a href="#" class="stretched-link"> -->
+                <h3>Nature Expeditions</h3>
+              </a>
+              <p>Join our nature expeditions for immersive experiences in Sri Lanka’s rich biodiversity.</p>
+            </div>
+          </div><!-- End Service Item -->
 
-            <article class="service-card">
-                <a href="photography-expeditions.html">
-                    <img src="assets/images/photography-optimized.png" alt="Photography Expeditions">
-                    <h3><a href="photography-expeditions.html">Photography Expeditions</a></h3>
-                    <p>Capture stunning landscapes and wildlife with expert guides.</p>
-                </a>
-            </article>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-camera2"></i>
+              </div>
+              <!-- <a href="#" class="stretched-link"> -->
+                <h3>Photography Tours</h3>
+              </a>
+              <p>Capture stunning landscapes and wildlife with our guided photography tours across Sri Lanka.</p>
+              <!-- <a href="#" class="stretched-link"></a> -->
+            </div>
+          </div><!-- End Service Item -->
 
-            <article class="service-card">
-                <a href="trekking-hiking.html">
-                    <img src="assets/images/trekking-optimized.png" alt="Trekking & Hiking">
-                    <h3><a href="trekking-hiking.html">Trekking & Hiking</a></h3>
-                    <p>Explore Sri Lanka's uncharted mountain terrains.</p>
-                </a>
-            </article>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <!-- <a href="#" class="stretched-link"> -->
+                <h3>Wildlife Encounters</h3>
+              </a>
+              <p>Experience unforgettable wildlife encounters with Sri Lanka's diverse and captivating animals.</p>
+              <!-- <a href="#" class="stretched-link"></a> -->
+            </div>
+          </div><!-- End Service Item -->
 
-            <article class="service-card">
-                <a href="adventure-tourism.html">
-                    <img src="assets/images/adventure-optimized.jpeg" alt="Adventure Tourism">
-                    <h3><a href="adventure-tourism.html">Adventure Tourism</a></h3>
-                    <p>Get your adrenaline rush with thrilling adventure tours.</p>
-                </a>
-            </article>
-        </section>
-    </main>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <!-- <a href="#" class="stretched-link"> -->
+                <h3>Adventure Tourism</h3>
+              </a>
+              <p>Explore the thrill of adventure tourism, offering unique experiences in Sri Lanka's wild.</p>
+              <!-- <a href="#" class="stretched-link"></a> -->
+            </div>
+          </div><!-- End Service Item -->
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Ranger.LK. All rights reserved.</p>
-        <p>&copy; 2024 Ranger.LK. All rights reserved.</p>
-        <ul class="social-links">
-            <li><a href="https://www.facebook.com/rangerlk/" target="_blank" aria-label="Facebook">Facebook</a></li>
-            <li><a href="https://www.instagram.com/ranger.lk/" aria-label="Instagram">Instagram</a></li>
-        </ul>
-        <p>Contact +94776771171 </p>
-    </footer>
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="assets/img/cta-bg.jpg" alt="">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>Ready to Explore?</h3>
+              <p>Join us at Ranger.LK for unforgettable adventures in Sri Lanka! Book your tour today and let the journey begin!</p>
+              <!-- <a class="cta-btn" href="#">Call To Action</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Call To Action Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Get in Touch</span>
+        <h2>Get in Touch</h2>
+        <p>Have questions or ready to plan your adventure? Contact us today, and let’s make it happen!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>214, Kandy 20000, Sri Lanka</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+94 77 6771171</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@ranger.lk</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5624349631025!2d80.63036861198943!3d7.290521213741729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3690c96c55a6f%3A0xea5d4e7d8574f5eb!2sRanger.LK!5e0!3m2!1sen!2smt!4v1728760332887!5m2!1sen!2smt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div><!-- End Google Maps -->
+
+          <!-- <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div>End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+    <a href="https://wa.me/94776771171" class="whatsapp-button" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
+      Book Now
+  </a>
+  
+  
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+<!-- 
+    /$$$$$$$$                                  /$$                         /$$      
+    |__  $$__/                                 | $$                        | $$      
+       | $$  /$$$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$| $$$$$$$ 
+       | $$ /$$__  $$| $$_  $$_  $$ /$$__  $$|_  $$_/   /$$__  $$ /$$_____/| $$__  $$
+       | $$| $$  \ $$| $$ \ $$ \ $$| $$  \ $$  | $$    | $$$$$$$$| $$      | $$  \ $$
+       | $$| $$  | $$| $$ | $$ | $$| $$  | $$  | $$ /$$| $$_____/| $$      | $$  | $$
+       | $$|  $$$$$$/| $$ | $$ | $$|  $$$$$$/  |  $$$$/|  $$$$$$$|  $$$$$$$| $$  | $$
+       |__/ \______/ |__/ |__/ |__/ \______/    \___/   \_______/ \_______/|__/  |__/
+                                                                                     
+   -->
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2024 Ranger.LK. All rights reserved.</span></p>
+      <div class="credits">
+
+        Web site developed by © <a href="http://www.tomotech.lk">Tomo Technologies Pvt Ltd</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
