@@ -1708,6 +1708,14 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+  display: flex; /* Enables flexbox for layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: #f5f5f5; /* Light gray background color */
+  padding: 20px; /* Adds padding inside the section */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  text-align: center; /* Centers text within the section */
 }
 
 .whatsapp-button {
@@ -2338,5 +2346,4 @@ section,
   .package-card .package-content p {
     font-size: 0.9rem;
   }
-
 }
