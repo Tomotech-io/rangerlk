@@ -2227,7 +2227,7 @@ section,
 /* Fixed height for package images */
 .package-card .image-container {
   width: 100%;
-  height: 250px; /* Adjust height as needed */
+  height: 300px; /* Adjust height as needed */
   overflow: hidden;
   border-radius: 8px;
 }
@@ -2241,7 +2241,7 @@ section,
 /* Fixed height for package images */
 .package-card .image-container {
   width: 100%;
-  height: 250px; /* Adjust height as needed */
+  height: 300px; /* Adjust height as needed */
   overflow: hidden;
   border-radius: 8px;
 }
@@ -2269,7 +2269,7 @@ section,
 /* Image Container with Consistent Size */
 .package-card .image-container {
   width: 100%;
-  height: 250px; /* Fixed height for consistency */
+  height: 300px; /* Fixed height for consistency */
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
