@@ -162,6 +162,81 @@
   </div>
 </section> -->
 
+<section id="packages" class="packages section light-background">
+  <div class="container">
+    <div class="section-title text-center" data-aos="fade-up">
+      <h2>Our Packages</h2>
+      <p>Explore our curated adventure and nature experiences.</p>
+    </div>
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 20
+            },
+            "640": {
+              "slidesPerView": 2,
+              "spaceBetween": 30
+            },
+            "992": {
+              "slidesPerView": 3,
+              "spaceBetween": 40
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper align-items-center">
+        <!-- Package 1 -->
+        <div class="swiper-slide">
+          <div class="package-card">
+            <img src="assets/img/package1.jpeg" alt="Three-Day Nature and Adventure Tour" class="img-fluid">
+            <h3>Three-Day Nature and Adventure Tour</h3>
+            <p>Immerse yourself in nature, culture, and adventure.</p>
+            <button class="btn btn-primary learn-more-btn" data-package="package1">
+              Learn More
+            </button>
+          </div>
+        </div>
+        <!-- Package 2 -->
+        <div class="swiper-slide">
+          <div class="package-card">
+            <img src="assets/img/package2.png" alt="Explore the Pekoe Trail" class="img-fluid">
+            <h3>Explore the Pekoe Trail</h3>
+            <p>A sustainable trekking experience across lush tea plantations.</p>
+            <button class="btn btn-primary learn-more-btn" data-package="package2">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Package Details -->
+  <div id="package-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="package-details"></div>
+    </div>
+  </div>
+</section>
+
+
+
 <section id="upcoming-events" class="upcoming-events section">
   <div class="container">
     <div class="section-title text-center" data-aos="fade-up">
@@ -303,59 +378,10 @@
 
 
     <!-- Clients Section
-    <section id="clients" class="clients section light-background">
+    <!-- /Clients Section -->
 
-      <div class="container">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client.png" class="img-fluid" alt=""></div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
+    
 
     <!-- Services Section -->
    
