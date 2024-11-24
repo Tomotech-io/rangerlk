@@ -2243,3 +2243,99 @@ section,
   height: 100%;
   object-fit: cover; /* Ensures consistent size while maintaining aspect ratio */
 }
+
+/* Package Card Styling */
+.package-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  perspective: 1000px;
+}
+
+.package-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Lift and scale for the 3D effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Container with Consistent Size */
+.package-card .image-container {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.package-card .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content Styling */
+.package-card .package-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.package-card .package-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.package-card .package-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5; /* Better readability for multiline text */
+}
+
+.package-card .btn {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.package-card .btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/* Swiper Pagination Styling */
+.swiper-pagination {
+  bottom: -20px !important; /* Positioned just below two lines of text */
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: #ddd;
+  margin: 0 6px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .swiper-pagination {
+    bottom: 0px; /* Adjust for smaller screens */
+  }
+
+  .package-card .package-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .package-card .package-content p {
+    font-size: 0.9rem;
+  }
+}
