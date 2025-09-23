@@ -1,0 +1,23 @@
+{
+  "logoMain": "/public/assets/img/logo.png",
+  "logoFooter": "/public/assets/img/logo-footer.png",
+  "hero": "/public/assets/hero/hero-optimized.jpeg",
+
+  "destCulturalTriangle": "/public/assets/destinations/adventure-event.png",
+  "destHill": "/public/assets/destinations/dest-hill.jpg",
+  "destSouth": "/public/assets/destinations/dest-south.jpg",
+  "destYala": "/public/assets/destinations/dest-yala.jpg",
+  "destEast": "/public/assets/destinations/dest-east.jpg",
+  "destKandy": "/public/assets/destinations/dest-kandy.jpg",
+
+  "itin10": "/public/assets/itineraries/10d.jpg",
+  "itin7": "/public/assets/itineraries/7d.jpg",
+  "itin12": "/public/assets/itineraries/12d.jpg",
+
+  "gal1": "/public/assets/gallery/1.jpg",
+  "gal2": "/public/assets/gallery/2.jpg",
+  "gal3": "/public/assets/gallery/3.jpg",
+  "gal4": "/public/assets/gallery/4.jpg",
+  "gal5": "/public/assets/gallery/5.jpg",
+  "gal6": "/public/assets/gallery/6.jpg"
+}

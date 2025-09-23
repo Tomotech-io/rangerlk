@@ -1,0 +1,192 @@
+/* src/css/pages/home.css
+   Home page sections: hero, destinations, itineraries, testimonials, gallery, FAQ, DMT module, forms
+*/
+
+/* -----------------------------
+   HERO
+------------------------------ */
+.hero{
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:clamp(62svh,62svh + 10vw,80svh);
+  overflow:hidden;
+  background:#0b3b2e;
+}
+.hero .ribbon{
+  position:absolute;
+  inset:auto 0 auto 0;
+  top:0;
+  height:8px;
+  background:linear-gradient(90deg,var(--saffron) 0%,var(--emerald) 50%,var(--maroon) 100%);
+}
+.hero-inner{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  width:min(960px,92vw);
+  color:var(--fg);
+}
+.kicker{
+  color:var(--saffron);
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  margin-bottom:.6rem;
+}
+.hero p{font-size:var(--step-1);color:#e6f2ee}
+.hero-cta{
+  margin-top:1.25rem;
+  display:flex;
+  gap:.75rem;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.hero img.hero-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:55% 45%;
+}
+/* Darken for text contrast */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(5,23,18,.35) 0%,rgba(5,23,18,.55) 60%,rgba(5,23,18,.65) 100%);
+  pointer-events:none;
+}
+/* Adjust focal point on narrow screens */
+@media (max-width:760px){
+  .hero img.hero-img{object-position:60% 50%}
+}
+
+/* -----------------------------
+   DESTINATIONS
+------------------------------ */
+.destinations{grid-template-columns:repeat(12,1fr)}
+.dest{
+  grid-column:span 4;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+}
+.dest .media{padding:0}
+.dest img{aspect-ratio:4/3;object-fit:cover}
+.dest .body{padding-block:1rem}
+.dest .meta{
+  display:flex;
+  gap:.75rem;
+  align-items:center;
+  padding-bottom:1rem;
+}
+@media (max-width:980px){.dest{grid-column:span 6}}
+@media (max-width:640px){.dest{grid-column:span 12}}
+
+/* -----------------------------
+   ITINERARIES
+------------------------------ */
+.itins{grid-template-columns:repeat(12,1fr)}
+.itin{grid-column:span 4}
+@media (max-width:980px){.itin{grid-column:span 6}}
+@media (max-width:640px){.itin{grid-column:span 12}}
+
+/* -----------------------------
+   TESTIMONIALS
+------------------------------ */
+.quotes{grid-template-columns:repeat(12,1fr)}
+.quote{
+  grid-column:span 6;
+  padding:1.25rem;
+  border:1px solid var(--border-dark);
+  border-radius:1rem;
+  background:#0d4233;
+  color:#e1efe9;
+}
+.quote p{font-style:italic}
+.quote .who{margin-top:.75rem;font-weight:700;color:#cfe3dc}
+@media (max-width:740px){.quote{grid-column:span 12}}
+
+/* -----------------------------
+   GALLERY (masonry)
+------------------------------ */
+.gallery{columns:4 240px;column-gap:.75rem}
+.gallery figure{
+  break-inside:avoid;
+  margin:0 0 .75rem;
+  overflow:hidden;
+  border-radius:.75rem;
+  border:1px solid var(--border-dark);
+}
+
+/* -----------------------------
+   FAQ
+------------------------------ */
+details{
+  border:1px solid var(--border-dark);
+  border-radius:.75rem;
+  padding:.75rem 1rem;
+  background:#0d4233;
+  color:#e1efe9;
+}
+details + details{margin-top:.5rem}
+summary{cursor:pointer;font-weight:800}
+
+/* -----------------------------
+   DESIGN MY TRIP (DMT)
+------------------------------ */
+#design{
+  position:relative;
+  padding:5rem 0;
+  background:#093427;
+  border-top:2px solid var(--emerald);
+}
+#design h2,
+#design p.eyebrow{color:#f1f7f4}
+.dmt-grid{
+  display:grid;
+  gap:1.25rem;
+  grid-template-columns:1.1fr .9fr;
+  align-items:start;
+}
+@media (max-width:860px){.dmt-grid{grid-template-columns:1fr}}
+.dmt .card{background:#fff}
+.dmt-summary{
+  background:#0d4233;
+  border:1px solid var(--border-dark);
+  color:#e1efe9;
+  border-radius:1rem;
+  padding:1.25rem;
+}
+.dmt-summary .row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px dashed #1b5947;
+  padding:.5rem 0;
+}
+.dmt-summary .row:last-child{border-bottom:0}
+.dmt .btn{background:var(--navy);border-color:var(--navy)}
+.dmt .btn.whatsapp{background:#25D366;border-color:#25D366;color:#083b2b}
+.dmt .helper{font-size:.9em;color:#516a62}
+
+/* -----------------------------
+   FORMS (page-specific tweaks)
+------------------------------ */
+form{display:grid;gap:.75rem}
+input,textarea,select{
+  width:100%;
+  padding:.85rem .95rem;
+  border-radius:.7rem;
+  border:1px solid var(--border);
+  background:#fff;
+  color:#0d2237;
+}
+textarea{min-height:140px;resize:vertical}
+.inline{
+  display:grid;
+  gap:.75rem;
+  grid-template-columns:1fr 1fr;
+}
+@media (max-width:560px){.inline{grid-template-columns:1fr}}
