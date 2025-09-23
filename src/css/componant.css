@@ -1,0 +1,118 @@
+/* src/css/components.css
+   BUTTONS ONLY — single modern glass-gradient style
+   Works with <a class="btn">, <button class="btn">, and input[type=button|submit].btn
+*/
+
+:root{
+  /* pulls from your palette, with safe fallbacks */
+  --btn-accent-1: var(--emerald, #1F7A3A);
+  --btn-accent-2: var(--navy, #0F2B46);
+  --btn-focus:    var(--saffron, #D18F00);
+
+  --btn-r: 14px;
+  --btn-py: .9rem;
+  --btn-px: 1.15rem;
+  --btn-gap: .55rem;
+  --btn-weight: 720;
+}
+
+/* Base */
+:where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn){
+  -webkit-appearance:none; appearance:none;
+  position:relative; isolation:isolate;
+  display:inline-flex; align-items:center; justify-content:center; gap:var(--btn-gap);
+  padding:var(--btn-py) var(--btn-px);
+  border-radius:var(--btn-r);
+  border:1px solid rgba(255,255,255,.14);
+  color:#f4fffa; font-weight:var(--btn-weight); letter-spacing:.01em; line-height:1;
+  text-decoration:none; cursor:pointer;
+
+  /* fallback gradient */
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(135deg, var(--btn-accent-1), var(--btn-accent-2));
+
+  /* enhanced tint (where supported) */
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 60%),
+    linear-gradient(135deg,
+      color-mix(in oklab, var(--btn-accent-1) 92%, white 6%),
+      color-mix(in oklab, var(--btn-accent-2) 96%, black 2%)
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.28),
+    0 10px 24px rgba(16, 90, 78, .28),
+    0 2px 6px rgba(0,0,0,.28);
+  backdrop-filter: blur(8px) saturate(140%);
+  transform: translateZ(0);
+  transition:
+    transform .08s ease,
+    box-shadow .2s ease,
+    filter .2s ease,
+    background-position .2s ease;
+}
+
+/* sheen + soft top highlight */
+:where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::before{
+  content:""; position:absolute; inset:-1px; border-radius:inherit; pointer-events:none;
+  background: linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,0) 60%);
+  mix-blend-mode: soft-light; opacity:.55;
+}
+
+/* glint sweep on hover */
+:where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::after{
+  content:""; position:absolute; top:-35%; left:-45%; width:40%; height:170%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 45%, rgba(255,255,255,0) 100%);
+  transform: translateX(-120%) rotate(15deg); pointer-events:none; filter: blur(2px);
+  transition: transform .6s ease;
+}
+:where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):hover::after{
+  transform: translateX(130%) rotate(15deg);
+}
+
+/* interactions */
+:where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):hover{
+  filter:brightness(1.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.35),
+    0 14px 28px rgba(16, 90, 78, .34),
+    0 3px 10px rgba(0,0,0,.32);
+}
+:where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):active{
+  transform:translateY(1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.2),
+    0 8px 16px rgba(16, 90, 78, .28),
+    0 2px 6px rgba(0,0,0,.32);
+}
+:where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):focus-visible{
+  outline:0;
+  box-shadow:
+    0 0 0 3px color-mix(in oklab, var(--btn-focus) 65%, transparent),
+    inset 0 1px 0 rgba(255,255,255,.28),
+    0 12px 26px rgba(16, 90, 78, .32);
+}
+
+/* sizes (optional) */
+.btn.sm{ padding:.65rem .9rem; border-radius:12px; font-weight:650; }
+.btn.lg{ padding:1.05rem 1.25rem; border-radius:16px; font-size:1.05rem; }
+
+/* block helper */
+.btn.block{ display:flex; width:100% }
+
+/* disabled */
+.btn[aria-disabled="true"], .btn:disabled{
+  cursor:not-allowed; opacity:.6; filter:saturate(.7) contrast(.95); transform:none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 4px 10px rgba(0,0,0,.22);
+}
+a.btn[aria-disabled="true"]{ pointer-events:none }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn){ transition:none }
+  :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::after{ display:none }
+}
+
+/* icons inside button (optional) */
+.btn > .icon{ display:inline-grid; place-items:center; width:1.2rem; height:1.2rem; line-height:0 }

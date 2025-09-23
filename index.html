@@ -1,561 +1,535 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-680TNML6DW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ranger.LK — Travel Sri Lanka • Tours, Safaris, Beaches & Culture</title>
+  <meta name="description" content="Plan your Sri Lanka trip with Ranger.LK — custom itineraries, wildlife safaris, scenic trains, beaches, and cultural highlights. Local experts. Ethical travel." />
+  <link rel="canonical" href="https://ranger.lk/" />
+  <meta name="theme-color" content="#0b3b2e" />
 
-  gtag('config', 'G-680TNML6DW');
+  <!-- External CSS (relative paths; safe for file://) -->
+  <link rel="preload" href="./src/css/base.css" as="style" />
+  <link rel="stylesheet" href="./src/css/base.css" />
+  <link rel="stylesheet" href="./src/css/layout.css" />
+  <link rel="stylesheet" href="./src/css/pages/home.css" />
 
-  
+  <!-- Inline BUTTON styles (ensures buttons look correct even if external CSS is cached/missing) -->
+  <style>
+    :root{
+      --btn-accent-1: var(--emerald, #1F7A3A);
+      --btn-accent-2: var(--navy, #0F2B46);
+      --btn-focus:    var(--saffron, #D18F00);
+      --btn-r: 14px; --btn-py: .9rem; --btn-px: 1.15rem; --btn-gap: .55rem; --btn-weight: 720;
+    }
+    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn){
+      -webkit-appearance:none; appearance:none; position:relative; isolation:isolate;
+      display:inline-flex; align-items:center; justify-content:center; gap:var(--btn-gap);
+      padding:var(--btn-py) var(--btn-px); border-radius:var(--btn-r);
+      border:1px solid rgba(255,255,255,.14); color:#f4fffa; font-weight:var(--btn-weight);
+      letter-spacing:.01em; line-height:1; text-decoration:none; cursor:pointer;
+      background:
+        radial-gradient(120% 140% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 60%),
+        linear-gradient(135deg,
+          color-mix(in oklab, var(--btn-accent-1) 92%, white 6%),
+          color-mix(in oklab, var(--btn-accent-2) 96%, black 2%)
+        );
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.28), 0 10px 24px rgba(16, 90, 78, .28), 0 2px 6px rgba(0,0,0,.28);
+      backdrop-filter: blur(8px) saturate(140%); transform: translateZ(0);
+      transition: transform .08s ease, box-shadow .2s ease, filter .2s ease, background-position .2s ease;
+    }
+    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::before{
+      content:""; position:absolute; inset:-1px; border-radius:inherit; pointer-events:none;
+      background: linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,0) 60%);
+      mix-blend-mode: soft-light; opacity:.55;
+    }
+    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::after{
+      content:""; position:absolute; top:-35%; left:-45%; width:40%; height:170%;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 45%, rgba(255,255,255,0) 100%);
+      transform: translateX(-120%) rotate(15deg); pointer-events:none; filter: blur(2px);
+      transition: transform .6s ease;
+    }
+    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):hover::after{ transform: translateX(130%) rotate(15deg); }
+    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):hover{
+      filter:brightness(1.06);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 14px 28px rgba(16, 90, 78, .34), 0 3px 10px rgba(0,0,0,.32);
+    }
+    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):active{ transform:translateY(1px); box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.2), 0 8px 16px rgba(16, 90, 78, .28), 0 2px 6px rgba(0,0,0,.32); }
+    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):focus-visible{
+      outline:0; box-shadow: 0 0 0 3px color-mix(in oklab, var(--btn-focus) 65%, transparent),
+      inset 0 1px 0 rgba(255,255,255,.28), 0 12px 26px rgba(16, 90, 78, .32);
+    }
+    .btn.sm{ padding:.65rem .9rem; border-radius:12px; font-weight:650; }
+    .btn.lg{ padding:1.05rem 1.25rem; border-radius:16px; font-size:1.05rem; }
+    .btn.block{ display:flex; width:100% }
+    .btn[aria-disabled="true"], .btn:disabled{ cursor:not-allowed; opacity:.6; filter:saturate(.7) contrast(.95); transform:none;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 4px 10px rgba(0,0,0,.22); }
+    a.btn[aria-disabled="true"]{ pointer-events:none }
+    @media (prefers-reduced-motion: reduce){
+      :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn){ transition:none }
+      :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::after{ display:none }
+    }
+  </style>
 
-</script>
-<!-- Meta Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1778761779643390'); fbq('track', 'PageView');</script><noscript> <img height="1" width="1" src="https://www.facebook.com/tr?id=1778761779643390&ev=PageView&noscript=1"/></noscript><!-- End Meta Pixel Code -->
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ranger.LK — Travel Sri Lanka">
+  <meta property="og:description" content="Custom tours & holidays in Sri Lanka: wildlife, beaches, hill country & culture.">
+  <meta property="og:url" content="https://ranger.lk/">
+  <meta property="og:image" content="./public/assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Ranger.lk - Adventure Awaits</title>
-  <meta name="description" content="Discover the beauty of Sri Lanka through immersive wildlife tours, adventure tourism, Experience in Camping Adventures, and nature immersion experiences. Join us for unforgettable journeys that connect you with nature and culture.">
-  <meta name="keywords" content="Sri Lanka, wildlife tours, adventure tourism, trekking, hiking, cultural heritage, nature immersion, eco-tourism, travel, adventure, wildlife, bird-watching, local experiences, natural beauty, sustainable tourism, tourism in Sri Lanka">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS and JS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <!-- <script src="assets/js/mouse.js" defer></script> -->
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCFQ60CZW4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KCFQ60CZW4');
-</script>
-
+  <!-- Inline asset map -->
+  <script id="ASSETS" type="application/json">
+  {
+    "logoMain": "./public/assets/img/logo.png",
+    "logoFooter": "./public/assets/img/logo.png",
+    "hero": "./public/assets/hero/hero-optimized.jpeg",
+    "destCulturalTriangle": "./public/assets/destinations/adventure-event.png",
+    "destHill": "./public/assets/destinations/dest-hill.png",
+    "destSouth": "./public/assets/destinations/dest-south.png",
+    "destYala": "./public/assets/destinations/dest-yala.png",
+    "destEast": "./public/assets/destinations/dest-east.jpg",
+    "destKandy": "./public/assets/destinations/dest-kandy.png",
+    "itin10": "./public/assets/itineraries/10d.png",
+    "itin7": "./public/assets/itineraries/7d.png",
+    "itin12": "./public/assets/itineraries/12d.png",
+    "gal1": "./public/assets/gallery/1.png",
+    "gal2": "./public/assets/gallery/2.png",
+    "gal3": "./public/assets/gallery/3.jpeg",
+    "gal4": "./public/assets/gallery/4.jpg",
+    "gal5": "./public/assets/gallery/5.png",
+    "gal6": "./public/assets/gallery/6.png"
+  }
+  </script>
 </head>
 
-<body class="index-page">
+<body data-whatsapp-number="94776771171">
+  <a class="skip" href="#main" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
-  <header id="header" class="header fixed-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@ranger.lk">info@ranger.lk</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+94 77 6771171</span></i>
+  <!-- Header -->
+  <header id="home" class="site-header">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a href="#home" class="brand" aria-label="Ranger.LK home">
+        <img data-asset="logoMain" alt="Ranger.LK logo" width="40" height="40" />
+        <span>Ranger.LK</span>
+      </a>
+      <nav>
+        <button id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu">☰</button>
+        <div id="menu" class="menu" role="menu">
+          <a role="menuitem" href="#destinations">Destinations</a>
+          <a role="menuitem" href="#experiences">Experiences</a>
+          <a role="menuitem" href="#itineraries">Itineraries</a>
+          <a role="menuitem" href="#gallery">Gallery</a>
+          <a role="menuitem" href="#design">Design my trip</a>
+          <a role="menuitem" class="btn" href="#design">Start now</a>
         </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
-          <a href="https://www.facebook.com/rangerlk/" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/ranger.lk/" class="instagram"><i class="bi bi-instagram"></i></a>
-          <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
-    <div class="branding d-flex align-items-center">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-
-          <h1 class="sitename">Ranger.lk</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="index.html#upcoming-events">Upcoming Events</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li class="dropdown"><a href="#adventures"><span>Adventures</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="Wildlife Tours.html">Wildlife Tours</a></li>
-                <!-- <li class="dropdown"><a href="#"><span>Photography Expeditions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Wildlife Tours</a></li>
-                    <li><a href="#">Photography Expeditions</a></li>
-                    <li><a href="#">Trekking & hiking</a></li>
-                    <li><a href="#">Adventure Tourism</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul> -->
-                </li>
-                <li><a href="Birdwatching.html">Bird-Watching</a></li>
-                <li><a href="Trekking & Hiking.html">Trekking & Hiking</a></li>
-                <li><a href="Adventure Tourism.html">Adventure Tourism</a></li>
-                <li><a href="Experience Camping Adventures.html">Experience Camping Adventures</a></li>
-                <li><a href="Nature Immersion Experiences.html">Nature Immersion Experiences</a></li>
-              </ul>
-            <!-- <li><a href="#portfolio">Portfolio</a></li> -->
-            
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-
+      </nav>
     </div>
-
   </header>
 
-  <main class="main">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="ribbon" aria-hidden="true"></div>
+    <img class="hero-img" data-asset="hero" alt="Ziplining through Sri Lanka's lush hills" loading="eager" decoding="async" fetchpriority="high">
+    <div class="hero-inner">
+      <div class="kicker">Sri Lanka • Travel • Holidays</div>
+      <h1>Discover Sri Lanka — beaches, wildlife, tea country & culture</h1>
+      <p>Crafted by local experts. From leopard safaris and scenic trains to UNESCO wonders and palm-fringed coasts. Travel better, travel responsibly.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#destinations">Explore destinations</a>
+        <a class="btn" href="#design">Design my trip</a>
+      </div>
+    </div>
+  </section>
 
-<!-- Hero Section -->
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-optimized.jpeg" alt="" data-aos="fade-in">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-start">
-          <div class="col-lg-8">
-            <h2>Adventure Awaits</h2>
-            <p>Explore the beauty of Sri Lanka with Ranger.LK</p>
-            <a href="#about" class="btn-get-started">Reach Us</a>
+  <main id="main">
+    <!-- Destinations -->
+    <section id="destinations" class="section container">
+      <p class="eyebrow">Top Places</p>
+      <h2>Signature Sri Lanka destinations</h2>
+      <div class="grid destinations">
+        <article class="card dest">
+          <div class="media"><img loading="lazy" data-asset="destCulturalTriangle" alt="Sigiriya rock fortress at sunset"></div>
+          <div class="body">
+            <h3>Cultural Triangle</h3>
+            <p>Sigiriya, Dambulla and Polonnaruwa — ancient capitals, cave temples and wildlife plains.</p>
+            <div class="meta"><span class="tag">Heritage</span><span class="tag">Wildlife</span></div>
           </div>
-        </div>
-      </div>
-   
-</section><!-- /Hero Section -->
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Cultural Triangle Highlights" href="#design">Design this trip</a></div>
+        </article>
 
-
-<!-- <section id="upcoming-events" class="upcoming-events section">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <h2>Upcoming Events</h2>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-        <h3>We are celebrating - World Tourism Day 2024</h3>
-        <img src="assets/img/tourism-event.jpeg" class="img-fluid" alt="Tourism Event">
-      </div>
-    </div>
-    
-    <div class="row justify-content-center mt-3">
-      <div class="col-lg-8 text-center">
-        <p>Join us for the World Tourism Day 2024. Celebrate nature, wildlife, and cultural heritage with us at Ranger.LK. Immerse yourself in Sri Lanka’s beauty and adventure through our exclusive event offerings.</p>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-<section id="packages" class="packages section light-background">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <h2>Our Packages</h2>
-      <p>Discover unforgettable adventures with Ranger.LK</p>
-    </div>
-
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": "auto",
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          },
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 1,
-              "spaceBetween": 20
-            },
-            "768": {
-              "slidesPerView": 2,
-              "spaceBetween": 30
-            },
-            "1024": {
-              "slidesPerView": 3,
-              "spaceBetween": 40
-            }
-          }
-        }
-      </script>
-      <div class="swiper-wrapper align-items-center">
-
-        <!-- Package 1 -->
-        <div class="swiper-slide">
-          <div class="package-card">
-            <div class="image-container">
-              <img src="assets/img/package1.jpg" class="img-fluid" alt="Three-Day Nature and Adventure Tour">
-            </div>
-            <div class="package-content">
-              <h3>Three-Day Nature & Adventure Tour</h3>
-              <p>
-                <strong>Day 1:</strong> Immerse yourself in traditional village life with cultural activities, cooking, weaving, a dip in a natural pool, and a treehouse stay under the stars.<br>
-                <strong>Day 2:</strong> Trek to Yahangala (Bedrock of Kings) with breathtaking views, spot wild elephants, and stay in a treehouse amidst chena cultivation.<br>
-                <strong>Day 3:</strong> Enjoy exhilarating waterfall sliding, explore a charming local village, and return to Kandy.<br>
-                <strong>Highlights:</strong> Treehouse stays, trekking, wildlife spotting, cultural immersion, and nature adventures.
-              </p>
-            </div>
+        <article class="card dest">
+          <div class="media"><img loading="lazy" data-asset="destHill" alt="Tea fields and a blue train in hill country"></div>
+          <div class="body">
+            <h3>Hill Country</h3>
+            <p>Ella & Nuwara Eliya — misty tea trails, waterfalls and the island’s most scenic train ride.</p>
+            <div class="meta"><span class="tag">Train</span><span class="tag">Hikes</span></div>
           </div>
-        </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Hill Country Escape" href="#design">Design this trip</a></div>
+        </article>
 
-        <!-- Package 2 -->
-        <div class="swiper-slide">
-          <div class="package-card">
-            <div class="image-container">
-              <img src="assets/img/package2.jpg" class="img-fluid" alt="Explore the Pekoe Trail">
-            </div>
-            <div class="package-content">
-              <h3>Explore the Pekoe Trail</h3>
-              <p>
-                <strong>Overview:</strong> Join Ranger.LK on the Pekoe Trail, a 300 km trek through Sri Lanka's central highlands. Experience diverse landscapes, cultural connections, and sustainable travel.<br>
-                <strong>Trail Highlights:</strong>
-                <ul>
-                  <li><strong>Day 1:</strong> Trek from Hanthana to Galaha, with panoramic views.</li>
-                  <li><strong>Day 2-3:</strong> Explore tea estates, Horton Plains, and Lipton's Seat.</li>
-                  <li><strong>Cultural Stops:</strong> Engage with local communities and tea culture, visit tea factories and villages.</li>
-                  <li><strong>Signature Treks:</strong> Hanthana to Galaha, Nuwara Eliya to Ella, and cultural stops at tea estates.</li>
-                </ul>
-                <strong>Why Choose This Trail?</strong> Stunning landscapes, tea culture, sustainability, guided tours, and flexible itineraries.<br>
-                <strong>Best Months to Visit:</strong> January to April and July to August.
-              </p>
-            </div>
+        <article class="card dest">
+          <div class="media"><img loading="lazy" data-asset="destSouth" alt="Galle fort walls and palm-lined coast"></div>
+          <div class="body">
+            <h3>South Coast</h3>
+            <p>Galle, Mirissa, Hiriketiya — beaches, whale watching, surf and colonial lanes.</p>
+            <div class="meta"><span class="tag">Beaches</span><span class="tag">Whales</span></div>
           </div>
-        </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="South Coast Chill" href="#design">Design this trip</a></div>
+        </article>
 
-        <!-- Package 3 -->
-        <div class="swiper-slide">
-          <div class="package-card">
-            <div class="image-container">
-              <img src="assets/img/package3.jpg" class="img-fluid" alt="Five-Day Adventure Expedition">
-            </div>
-            <div class="package-content">
-              <h3>Five-Day Adventure Expedition</h3>
-              <p>
-                <strong>Overview:</strong> A 5-day trek from Kandy to Sigiriya via Meemure, Ranamure, Walpolamulla, and Pitawala.<br>
-                <strong>Day 1:</strong> Depart from Kandy, trek to hidden waterfalls, and explore Meemure village culture. Overnight stay at a Meemure homestay.<br>
-                <strong>Day 2:</strong> Trek to Ranamure through forests and streams. Overnight stay in a cabana.<br>
-                <strong>Day 3:</strong> Observe wildlife on a trek to Walpolamulla. Explore village ruins. Overnight stay at a Walpolamulla homestay.<br>
-                <strong>Day 4:</strong> Climb Manigala Mountain and descend to Pitawala Village. Overnight stay at a Pitawala homestay.<br>
-                <strong>Day 5:</strong> Visit Pitawala Pathana, Mini World's End, and Bambarakiri Ella Waterfall. Continue to Sigiriya Rock Fortress.<br>
-                <strong>Highlights:</strong> Trekking, hidden waterfalls, village exploration, wildlife spotting, and cultural immersion.
-              </p>
-            </div>
+        <article class="card dest">
+          <div class="media"><img loading="lazy" data-asset="destYala" alt="Leopard in Yala National Park"></div>
+          <div class="body">
+            <h3>Yala & Wilpattu</h3>
+            <p>Iconic national parks — leopards, elephants and diverse birdlife with ethical guiding.</p>
+            <div class="meta"><span class="tag">Safari</span><span class="tag">Birding</span></div>
           </div>
-        </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Leopard & Elephants Safari" href="#design">Design this trip</a></div>
+        </article>
 
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="upcoming-events" class="upcoming-events section">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <h1>Upcoming Events</h1>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-        <h3>Three-Day Nature and Adventure Tour by Ranger.LK</h3>
-        <img src="assets/img/nature-adventure-event.png" class="img-fluid" alt="Three-Day Nature and Adventure Tour">
-      </div>
-    </div>
-    
-    <div class="row justify-content-center mt-3">
-      <div class="col-lg-8 text-center">
-        <h4>Immerse Yourself in Nature, Culture, and Adventure</h4>
-
-        <p style="font-weight: bold; font-size: 1.2em; color: #2b6cb0; text-decoration: underline; margin-top: 1rem;">Day 1: Immersion in Traditional Village Life</p>
-        <p>Scenic drives, cultural activities (cooking, weaving), a dip in a serene natural pool, and an overnight stay in a rustic treehouse with dinner under the stars.</p>
-
-        <p style="font-weight: bold; font-size: 1.2em; color: #2b6cb0; text-decoration: underline; margin-top: 1rem;">Day 2: Trekking to Yahangala and Wildlife Adventure</p>
-        <p>Adventurous trek to Yahangala (Bedrock of Kings), wild elephant observation, and an overnight stay in a chena treehouse, surrounded by traditional farming practices.</p>
-
-        <p style="font-weight: bold; font-size: 1.2em; color: #2b6cb0; text-decoration: underline; margin-top: 1rem;">Day 3: Waterfall Sliding and Village Exploration</p>
-        <p>Exhilarating waterfall sliding adventure and exploration of a charming local village. Includes lunch before departure for Kandy.</p>
-
-        <p><strong>Tour Highlights:</strong> Traditional village life, treehouse stays, trekking Yahangala, wild elephant sightings, waterfall sliding, and cultural immersion.</p>
-        <p><strong>Price:</strong> Contact us for pricing details.</p>
-
-        <a href="https://wa.me/94776771171" class="btn btn-primary mt-3">Reserve Your Spot Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Discover the Untamed Beauty of Sri Lanka<br></span>
-        <h2>Discover the Untamed Beauty of Sri Lanka<br></h2>
-        <p>At Ranger.LK, we are passionate about delivering unforgettable experiences that immerse you in the breathtaking beauty and rich biodiversity of Sri Lanka. Whether you're a nature enthusiast, adventure seeker, or wildlife lover, our tours are designed to inspire and rejuvenate your spirit. Let the wild guide your journey.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-
-
-          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Whether you're a nature enthusiast, adventure seeker, or wildlife lover</h3>
-            <p class="fst-italic">
-              At Ranger.LK, Our tours are designed to inspire and rejuvenate your spirit. Let the wild guide your journey.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Enjoy insights from passionate guides who enhance your adventure.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Customize your tour to match your interests and skill levels.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Experience eco-friendly tourism that protects Sri Lanka’s beauty.</span></li>
-            </ul>
-            <a href="#contact" class="read-more"><span>Contact Us</span><i class="bi bi-arrow-right"></i></a>
+        <article class="card dest">
+          <div class="media"><img loading="lazy" data-asset="destEast" alt="Turquoise bay in Trincomalee"></div>
+          <div class="body">
+            <h3>East Coast</h3>
+            <p>Trincomalee & Arugam Bay — calm bays (May–Sep), snorkelling and world-class surf.</p>
+            <div class="meta"><span class="tag">Snorkel</span><span class="tag">Surf</span></div>
           </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="East Coast Blue" href="#design">Design this trip</a></div>
+        </article>
 
-        </div>
-
+        <article class="card dest">
+          <div class="media"><img loading="lazy" data-asset="destKandy" alt="Temple of the Tooth in Kandy"></div>
+          <div class="body">
+            <h3>Kandy & Knuckles</h3>
+            <p>UNESCO heritage, cultural performances and ridge hikes with panoramic views.</p>
+            <div class="meta"><span class="tag">Culture</span><span class="tag">Mountains</span></div>
+          </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Kandy & Knuckles Trails" href="#design">Design this trip</a></div>
+        </article>
       </div>
-
-    </section><!-- /About Section -->
-
-<!-- Cards Section -->
-<section id="adventures" class="cards section">
-
-  <div class="container">
-
-    <div class="row no-gutters">
-
-      <!-- Card 1 -->
-      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="100">
-        <a href="Wildlife Tours.html">
-          <span style="font-size: 25px;font-weight: 400;">01</span>
-          <h4>Wildlife Tours</h4>
-          <p>Join us on an unforgettable journey through Sri Lanka’s lush jungles and serene wetlands. From the majestic elephants of Udawalawe to the elusive leopards of Yala, our wildlife tours offer you the chance to encounter the island’s most iconic creatures in their natural habitat. Whether you're a passionate wildlife enthusiast or simply seeking a unique adventure, let the wild inspire you.</p>
-        </a>
-      </div><!-- End Card Item -->
-
-      <!-- Card 2 -->
-      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="200">
-        <a href="Birdwatching.html">
-          <span style="font-size: 25px;font-weight: 400;">02</span>
-          <h4>Bird Watching</h4>
-          <p>Ranger.lk offers immersive bird-watching experiences, connecting you with Sri Lanka's rich and diverse avian wildlife guided by experts.</p>
-        </a>
-      </div><!-- End Card Item -->
-
-      <!-- Card 3 -->
-      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="300">
-        <a href="Trekking & Hiking.html">
-          <span style="font-size: 25px;font-weight: 400;">03</span>
-          <h4>Trekking & Hiking</h4>
-          <p>Step into the heart of Sri Lanka's lush landscapes with our trekking and hiking adventures. From the rolling hills of the Knuckles Range to the misty peaks of the Central Highlands, each journey takes you through untouched nature, offering panoramic views, hidden waterfalls, and an intimate connection with the wild. Challenge yourself, explore the uncharted, and let the wilderness guide you.</p>
-        </a>
-      </div><!-- End Card Item -->
-
-      <!-- Card 4 -->
-      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
-        <a href="Adventure Tourism.html">
-          <span style="font-size: 25px;font-weight: 400;">04</span>
-          <h4>Adventure Tourism</h4>
-          <p>Our adrenaline-pumping adventure tours offer everything from forest treks to river rafting, jungle expeditions to waterfall abseiling. Experience the thrill of exploring untouched landscapes, guided by experts who ensure your safety while igniting your sense of adventure. It’s time to embrace the wild and conquer new challenges.</p>
-        </a>
-      </div><!-- End Card Item -->
-
-      <!-- Card 5 -->
-      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="500">
-        <a href="Experience Camping Adventures.html">
-          <span style="font-size: 25px;font-weight: 400;">05</span>
-          <h4>Experience Camping Adventure</h4>
-          <p>Embark on an unforgettable journey with Ranger.LK's Camping Adventures, where nature becomes your home. Nestled in the heart of Sri Lanka’s untouched landscapes, our camping experiences offer the perfect blend of adventure and tranquility. Whether you’re seeking serene nights under the stars or exploring the wilderness by day, our guided tours provide safe, eco-friendly camping in some of the island’s most scenic spots. Reconnect with nature, enjoy campfire stories, and create lasting memories on your next camping adventure with Ranger.LK!</p>
-        </a>
-      </div><!-- End Card Item -->
-
-      <!-- Card 6 -->
-      <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="600">
-        <a href="Nature Immersion Experiences.html">
-          <span style="font-size: 25px;font-weight: 400;">06</span>
-          <h4>Nature Immersion Experiences</h4>
-          <p>Immerse yourself in the serene beauty of Sri Lanka's natural landscapes with our curated nature experiences. From tranquil lakes to dense jungles, each journey reconnects you with the tranquility of the outdoors.</p>
-        </a>
-      </div><!-- End Card Item -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Cards Section -->
-
-
-    <!-- Clients Section
-    <!-- /Clients Section -->
-
-
-    
-
-    <!-- Services Section -->
-   
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span>Get in Touch</span>
-        <h2>Get in Touch</h2>
-        <p>Have questions or ready to plan your adventure? Contact us today, and let’s make it happen!</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Address</h3>
-              <p>214, Kandy 20000, Sri Lanka</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Call Us</h3>
-              <p>+94 77 6771171</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope"></i>
-              <h3>Email Us</h3>
-              <p>info@ranger.lk</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5624349631025!2d80.63036861198943!3d7.290521213741729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3690c96c55a6f%3A0xea5d4e7d8574f5eb!2sRanger.LK!5e0!3m2!1sen!2smt!4v1728760332887!5m2!1sen!2smt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!-- End Google Maps -->
-
-          <!-- <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div>End Contact Form -->
-
-        </div>
-
-      </div>
-
     </section>
 
-    
-    <a href="https://wa.me/94776771171" class="whatsapp-button" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
-      Book Now
-  </a>
-  
-  
+    <!-- Experiences -->
+    <section id="experiences" class="section container">
+      <p class="eyebrow">Experiences</p>
+      <h2>What you can do in Sri Lanka</h2>
+      <div class="grid xp-grid">
+        <div class="xp"><div class="icon">🛤️</div><div><h3>Scenic train journeys</h3><p>Ride the famed Kandy–Ella line across tea valleys, viaducts and cloud forests.</p></div></div>
+        <div class="xp"><div class="icon">🦁</div><div><h3>Wildlife safaris</h3><p>Seek leopards, elephants and sloth bears with conservation-minded rangers.</p></div></div>
+        <div class="xp"><div class="icon">🏖️</div><div><h3>Beaches & water</h3><p>Snorkel Pigeon Island, watch blue whales in season, or simply unwind on golden sands.</p></div></div>
+        <div class="xp"><div class="icon">🥾</div><div><h3>Hikes & tea trails</h3><p>From Little Adam’s Peak to Horton Plains, choose routes fit for your pace.</p></div></div>
+        <div class="xp"><div class="icon">🕍</div><div><h3>Culture & festivals</h3><p>Witness Kandy Esala Perahera, explore temples, and learn village crafts.</p></div></div>
+        <div class="xp"><div class="icon">🕊️</div><div><h3>Birdwatching</h3><p>Track island endemics with guides who know the calls and habitats.</p></div></div>
+      </div>
+    </section>
+
+    <!-- Itineraries -->
+    <section id="itineraries" class="section container">
+      <p class="eyebrow">Sample Plans</p>
+      <h2>Popular itineraries</h2>
+      <div class="grid itins">
+        <article class="card itin">
+          <div class="media" style="padding:0"><img loading="lazy" data-asset="itin10" alt="Sunrise over hill country"></div>
+          <div class="body">
+            <h3>Classic Highlights • 10 Days</h3>
+            <p>Cultural Triangle → Kandy → Ella (train) → Yala → South Coast. Balanced pace for first-timers.</p>
+            <p class="tag" style="background:#fff6e0;border-color:#ffe2a9;color:#8a5b00;">Great for couples & families</p>
+          </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Classic Highlights 10D" href="#design">Design this trip</a></div>
+        </article>
+        <article class="card itin">
+          <div class="media" style="padding:0"><img loading="lazy" data-asset="itin7" alt="Jeep safari in Yala"></div>
+          <div class="body">
+            <h3>Wildlife & Beaches • 7 Days</h3>
+            <p>Wilpattu or Yala safaris, then relax on the south coast. Ideal Nov–Apr.</p>
+            <p class="tag" style="background:#eef7ff;border-color:#cfe5ff;color:#0f2b46;">Easy pace</p>
+          </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Wildlife & Beaches 7D" href="#design">Design this trip</a></div>
+        </article>
+        <article class="card itin">
+          <div class="media" style="padding:0"><img loading="lazy" data-asset="itin12" alt="Temple and lake in Kandy"></div>
+          <div class="body">
+            <h3>Culture & Hills • 12 Days</h3>
+            <p>Deep-dive into heritage and tea country with added hikes and village stays.</p>
+            <p class="tag" style="background:#efe5e5;border-color:#e6c2b8;color:#7A1E10;">Active travelers</p>
+          </div>
+          <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Culture & Hills 12D" href="#design">Design this trip</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Design My Trip -->
+    <section id="design" class="section">
+      <div class="container dmt">
+        <p class="eyebrow">Design My Trip</p>
+        <h2>Plan & book — send to WhatsApp</h2>
+        <p class="helper">Select a package, pick your date and group size, add notes, then tap <em>Send to WhatsApp</em>. We’ll confirm availability and pricing.</p>
+
+        <div class="dmt-grid">
+          <!-- Form -->
+          <form id="dmtForm" class="card" style="padding:1.25rem;">
+            <div class="inline">
+              <label>
+                <span>Full name</span>
+                <input required type="text" name="name" autocomplete="name" />
+              </label>
+              <label>
+                <span>Email (optional)</span>
+                <input type="email" name="email" autocomplete="email" />
+              </label>
+            </div>
+
+            <div class="inline">
+              <label>
+                <span>Choose package</span>
+                <select required name="package" id="packageSelect">
+                  <option value="">Select a package…</option>
+                  <option>Classic Highlights 10D</option>
+                  <option>Wildlife & Beaches 7D</option>
+                  <option>Culture & Hills 12D</option>
+                  <option>Leopard & Elephants Safari</option>
+                  <option>Hill Country Escape</option>
+                  <option>South Coast Chill</option>
+                  <option>Cultural Triangle Highlights</option>
+                  <option>East Coast Blue</option>
+                </select>
+              </label>
+              <label>
+                <span>Group size</span>
+                <select name="group">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3–4</option>
+                  <option>5–8</option>
+                  <option>8+</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="inline">
+              <label>
+                <span>Start date</span>
+                <input required type="date" name="start" id="startDate" />
+              </label>
+              <label>
+                <span>Nights</span>
+                <input required type="number" name="nights" id="nights" min="1" max="60" value="7" />
+              </label>
+            </div>
+
+            <label>
+              <span>Notes</span>
+              <textarea name="notes" placeholder="Must-see places, budget range, hotel style, dietary needs…"></textarea>
+            </label>
+
+            <div style="display:flex; gap:.75rem; align-items:center; margin-top:.5rem; flex-wrap:wrap;">
+              <button class="btn" type="submit">Preview details</button>
+              <button id="sendWA" class="btn" type="button" aria-disabled="true" disabled>Send to WhatsApp</button>
+              <span class="helper">WhatsApp will open with your trip details pre-filled.</span>
+            </div>
+          </form>
+
+          <!-- Live Summary -->
+          <aside class="dmt-summary">
+            <h3 style="margin-top:0; color:#fff;">Your trip summary</h3>
+            <div class="row"><span>Package</span><strong id="sPkg">—</strong></div>
+            <div class="row"><span>Dates</span><strong id="sDates">—</strong></div>
+            <div class="row"><span>Group</span><strong id="sGroup">—</strong></div>
+            <div class="row"><span>Nights</span><strong id="sNights">—</strong></div>
+            <div class="row" style="align-items:start"><span>Notes</span><strong id="sNotes" style="max-width:60ch; text-align:right; font-weight:500; color:#e1efe9;">—</strong></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section container">
+      <p class="eyebrow">Guest Stories</p>
+      <h2>What travelers say</h2>
+      <div class="grid quotes">
+        <div class="quote">
+          <p>“Flawless planning and thoughtful guides. The train views and leopard sightings were unforgettable.”</p>
+          <div class="who">— Mia R., Germany</div>
+        </div>
+        <div class="quote">
+          <p>“Loved the balance: culture, beaches and time to just relax. We’ll be back for the east coast!”</p>
+          <div class="who">— Jason T., Australia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section container">
+      <p class="eyebrow">Gallery</p>
+      <h2>Inspiration</h2>
+      <div class="gallery" aria-label="Photo gallery">
+        <figure><img loading="lazy" data-asset="gal1" alt="Nine Arches Bridge with blue train" width="800" height="600"></figure>
+        <figure><img loading="lazy" data-asset="gal2" alt="Galle lighthouse at golden hour" width="800" height="600"></figure>
+        <figure><img loading="lazy" data-asset="gal3" alt="Snorkelling over coral reef" width="800" height="600"></figure>
+        <figure><img loading="lazy" data-asset="gal4" alt="Leopard on a tree" width="800" height="600"></figure>
+        <figure><img loading="lazy" data-asset="gal5" alt="Tea picker in emerald fields" width="800" height="600"></figure>
+        <figure><img loading="lazy" data-asset="gal6" alt="Sigiriya from the water gardens" width="800" height="600"></figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section container">
+      <p class="eyebrow">FAQ</p>
+      <h2>Good to know</h2>
+      <details>
+        <summary>When is the best time to visit?</summary>
+        <p>Nov–Apr is best for the south & west coasts and hill country; May–Sep shines on the east coast. We tailor routes to seasons.</p>
+      </details>
+      <details>
+        <summary>Can trips be customised?</summary>
+        <p>Yes. Tell us your dates, budget and interests — we’ll craft a plan with transparent pricing and ethical partners.</p>
+      </details>
+      <details>
+        <summary>Do you arrange visas and insurance?</summary>
+        <p>We provide guidance on Sri Lanka’s ETA visa and recommend comprehensive travel insurance, but we don’t issue visas or policies.</p>
+      </details>
+    </section>
   </main>
 
-  <footer id="footer" class="footer position-relative dark-background">
-
-<!-- 
-    /$$$$$$$$                                  /$$                         /$$      
-    |__  $$__/                                 | $$                        | $$      
-       | $$  /$$$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$| $$$$$$$ 
-       | $$ /$$__  $$| $$_  $$_  $$ /$$__  $$|_  $$_/   /$$__  $$ /$$_____/| $$__  $$
-       | $$| $$  \ $$| $$ \ $$ \ $$| $$  \ $$  | $$    | $$$$$$$$| $$      | $$  \ $$
-       | $$| $$  | $$| $$ | $$ | $$| $$  | $$  | $$ /$$| $$_____/| $$      | $$  | $$
-       | $$|  $$$$$$/| $$ | $$ | $$|  $$$$$$/  |  $$$$/|  $$$$$$$|  $$$$$$$| $$  | $$
-       |__/ \______/ |__/ |__/ |__/ \______/    \___/   \_______/ \_______/|__/  |__/
-                                                                                     
-   -->
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>2024 Ranger.LK. All rights reserved.</span></p>
-      <div class="credits">
-
-        Web site developed by © <a href="http://www.tomotech.lk">Tomo Technologies Pvt Ltd</a>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:.5rem;">
+          <img data-asset="logoFooter" alt="Ranger.LK logo small" width="40" height="40" />
+          <span>Ranger.LK</span>
+        </div>
+        <p>Custom tours & holidays across Sri Lanka. Local expertise, ethical partners, transparent pricing.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.35rem;">
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#itineraries">Itineraries</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.35rem;">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.35rem;">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
       </div>
     </div>
-
+    <div class="container copyright">
+      <span>© <span id="year"></span> Ranger.LK. All rights reserved.</span>
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Ranger.LK","url":"https://ranger.lk/","logo":"https://ranger.lk/assets/logo.png","sameAs":["https://www.instagram.com/ranger.lk/"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","url":"https://ranger.lk/","potentialAction":{"@type":"SearchAction","target":"https://ranger.lk/search?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  <!-- JS (inline, file:// friendly) -->
+  <script type="module">
+    // Hydrate <img data-asset="..."> using inline #ASSETS map
+    (() => {
+      let map = {};
+      try { const el = document.getElementById('ASSETS'); if (el) map = JSON.parse(el.textContent || '{}'); } catch(_) {}
+      document.querySelectorAll('img[data-asset]').forEach(img => {
+        const key = img.getAttribute('data-asset'); if (key && map[key]) img.src = map[key];
+      });
+    })();
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    // Mobile nav toggle + footer year
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    menuBtn?.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+    });
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Design My Trip logic
+    const form = document.getElementById('dmtForm');
+    if (form) {
+      const sPkg = document.getElementById('sPkg');
+      const sDates = document.getElementById('sDates');
+      const sGroup = document.getElementById('sGroup');
+      const sNights = document.getElementById('sNights');
+      const sNotes = document.getElementById('sNotes');
+      const startDateEl = document.getElementById('startDate');
+      const pkgSelect = document.getElementById('packageSelect');
+      const sendWA = document.getElementById('sendWA');
+      const WHATSAPP_NUMBER = document.body.dataset.whatsappNumber || '';
 
+      const formatDate = (iso) => {
+        if (!iso) return '';
+        const d = new Date(iso + 'T00:00:00');
+        return d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+      };
+      const addDays = (dateISO, days) => {
+        const d = new Date(dateISO + 'T00:00:00');
+        d.setDate(d.getDate() + Number(days));
+        return d.toISOString().slice(0,10);
+      };
+      const updateSummary = () => {
+        const fd = new FormData(form);
+        const p = fd.get('package') || '—';
+        const g = fd.get('group') || '—';
+        const n = fd.get('nights') || '—';
+        const s = fd.get('start');
+        const e = s && n ? addDays(s, n) : '';
+        sPkg.textContent = p; sGroup.textContent = g; sNights.textContent = n;
+        sNotes.textContent = (fd.get('notes') || '—').toString();
+        sDates.textContent = s ? `${formatDate(s)}${e ? ' → ' + formatDate(e) : ''}` : '—';
+        const ready = fd.get('name') && fd.get('package') && fd.get('start') && fd.get('nights');
+        sendWA.disabled = !ready; sendWA.setAttribute('aria-disabled', String(!ready));
+      };
+      form.addEventListener('input', updateSummary);
+      form.addEventListener('change', updateSummary);
+      form.addEventListener('submit', e => { e.preventDefault(); updateSummary(); });
+
+      document.querySelectorAll('[data-package]')?.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.getAttribute('data-package');
+          if (val && pkgSelect) { pkgSelect.value = val; updateSummary(); }
+        });
+      });
+
+      sendWA?.addEventListener('click', () => {
+        const fd = new FormData(form);
+        const name = fd.get('name') || '';
+        const email = fd.get('email') || '';
+        const pack = fd.get('package') || '';
+        const start = fd.get('start') || '';
+        const nights = fd.get('nights') || '';
+        const group = fd.get('group') || '';
+        const notes = fd.get('notes') || '';
+        const end = start && nights ? addDays(start, nights) : '';
+        const msg = `Hello Ranger.LK,%0A%0AI'd like to design a trip:%0A• Name: ${encodeURIComponent(name)}%0A• Package: ${encodeURIComponent(pack)}%0A• Dates: ${encodeURIComponent(formatDate(start))}${end?` → ${encodeURIComponent(formatDate(end))}`:''}%0A• Nights: ${encodeURIComponent(nights)}%0A• Group: ${encodeURIComponent(group)}%0A• Email: ${encodeURIComponent(email)}%0A• Notes: ${encodeURIComponent(notes)}%0A%0A(Generated from website)`;
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
+        window.open(url, '_blank', 'noopener');
+      });
+
+      const todayISO = new Date().toISOString().slice(0,10);
+      if (startDateEl) startDateEl.min = todayISO;
+    }
+  </script>
 </body>
-
 </html>
