@@ -1,7 +1,7 @@
 /* Variables, resets, typography */
 :root{
   --deep-forest:#0b3b2e;--navy:#0f2b46;--saffron:#D18F00;--emerald:#1F7A3A;--maroon:#7A1E10;
-  --bg:var(--deep-forest);--fg:#f1f7f4;--muted:#b7c9c0;--link:#7cc6ff;--card:#fff;
+  --bg:var(--deep-forest);--fg:oklab(50.660000000000004% -0.10565 0.04832);--muted:#b7c9c0;--link:#7cc6ff;--card:#fff;
   --soft:#0f4636;--border:#dfe8e3;--border-dark:#1c5947;
   --step--1:clamp(.92rem,.84rem + .35vw,1rem);
   --step-0: clamp(1rem,.9rem + .6vw,1.125rem);

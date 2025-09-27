@@ -105,7 +105,7 @@
   color:#e1efe9;
 }
 .quote p{font-style:italic}
-.quote .who{margin-top:.75rem;font-weight:700;color:#cfe3dc}
+.quote .who{margin-top:.75rem;font-weight:700;color:hsl(159, 68%, 17%)}
 @media (max-width:740px){.quote{grid-column:span 12}}
 
 /* -----------------------------
@@ -143,7 +143,7 @@ summary{cursor:pointer;font-weight:800}
   border-top:2px solid var(--emerald);
 }
 #design h2,
-#design p.eyebrow{color:#f1f7f4}
+#design p.eyebrow{color:#1b6942}
 .dmt-grid{
   display:grid;
   gap:1.25rem;
