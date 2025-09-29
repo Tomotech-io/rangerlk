@@ -1,19 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-680TNML6DW"></script>
-
-
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Ranger.lk - Adventure Awaits</title>
-  <meta name="description" content="Discover the beauty of Sri Lanka through immersive wildlife tours, adventure tourism, Experience in Camping Adventures, and nature immersion experiences. Join us for unforgettable journeys that connect you with nature and culture.">
-  <meta name="keywords" content="Sri Lanka, wildlife tours, adventure tourism, trekking, hiking, cultural heritage, nature immersion, eco-tourism, travel, adventure, wildlife, bird-watching, local experiences, natural beauty, sustainable tourism, tourism in Sri Lanka">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <!--
+    Ranger.LK — Full Home Page (flat file)
+    ---------------------------------------------------------
+    • Booking module: Start → End + Guests (1–50) + Mobile + Email (required).
+    • Simple email validation with clear red ribbon errors + typo hints.
+    • Header CTA = WhatsApp-green “Book your trip”.
+    • Hero text slightly smaller & semi-transparent.
+    • Cultural Triangle includes Anuradhapura.
+    • Gallery fixed to use your uploaded files 1.jpeg … 9.jpeg.
+    • Footer email: info@ranger.lk.
+  -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ranger.LK — Travel Sri Lanka • Tours, Safaris, Beaches & Culture</title>
@@ -21,45 +19,44 @@
   <link rel="canonical" href="https://ranger.lk/" />
   <meta name="theme-color" content="#0b3b2e" />
 
-  <!-- External CSS (relative paths; safe for file://) -->
+  <!-- External CSS (flat-file friendly paths). Keep these if you’re using separate CSS files. -->
+  <link rel="icon" href="./public/assets/img/logo.ico">
   <link rel="preload" href="./src/css/base.css" as="style" />
   <link rel="stylesheet" href="./src/css/base.css" />
   <link rel="stylesheet" href="./src/css/layout.css" />
   <link rel="stylesheet" href="./src/css/pages/home.css" />
 
-  <!-- Inline BUTTON styles (ensures buttons look correct even if external CSS is cached/missing) -->
+  <!-- Inline tweaks (buttons, hero text, DMT notes, errors, gallery masonry) -->
   <style>
     :root{
-      --btn-accent-1: var(--emerald, #1F7A3A);
-      --btn-accent-2: var(--navy, #0F2B46);
-      --btn-focus:    var(--saffron, #D18F00);
-      --btn-r: 14px; --btn-py: .9rem; --btn-px: 1.15rem; --btn-gap: .55rem; --btn-weight: 720;
+      --deep-forest:#0b3b2e; --navy:#0f2b46; --saffron:#D18F00; --emerald:#1F7A3A; --maroon:#7A1E10;
+      --danger:#c1121f; --danger-2:#8f0c15; --danger-soft:#ffe9eb;
+      --btn-r:14px; --btn-py:.9rem; --btn-px:1.15rem; --btn-gap:.55rem; --btn-weight:720;
     }
     :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn){
-      -webkit-appearance:none; appearance:none; position:relative; isolation:isolate;
-      display:inline-flex; align-items:center; justify-content:center; gap:var(--btn-gap);
-      padding:var(--btn-py) var(--btn-px); border-radius:var(--btn-r);
-      border:1px solid rgba(255,255,255,.14); color:#f4fffa; font-weight:var(--btn-weight);
-      letter-spacing:.01em; line-height:1; text-decoration:none; cursor:pointer;
+      -webkit-appearance:none;appearance:none;position:relative;isolation:isolate;
+      display:inline-flex;align-items:center;justify-content:center;gap:var(--btn-gap);
+      padding:var(--btn-py) var(--btn-px);border-radius:var(--btn-r);
+      border:1px solid rgba(255,255,255,.14);color:#f4fffa;font-weight:var(--btn-weight);
+      letter-spacing:.01em;line-height:1;text-decoration:none;cursor:pointer;
       background:
         radial-gradient(120% 140% at 50% 0%, rgba(255,255,255,.18) 0%, rgba(255,255,255,0) 60%),
         linear-gradient(135deg,
-          color-mix(in oklab, var(--btn-accent-1) 92%, white 6%),
-          color-mix(in oklab, var(--btn-accent-2) 96%, black 2%)
+          color-mix(in oklab, var(--emerald) 92%, white 6%),
+          color-mix(in oklab, var(--navy) 96%, black 2%)
         );
       box-shadow: inset 0 1px 0 rgba(255,255,255,.28), 0 10px 24px rgba(16, 90, 78, .28), 0 2px 6px rgba(0,0,0,.28);
       backdrop-filter: blur(8px) saturate(140%); transform: translateZ(0);
       transition: transform .08s ease, box-shadow .2s ease, filter .2s ease, background-position .2s ease;
     }
     :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::before{
-      content:""; position:absolute; inset:-1px; border-radius:inherit; pointer-events:none;
-      background: linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,0) 60%);
-      mix-blend-mode: soft-light; opacity:.55;
+      content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;
+      background: linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,0) 60%);opacity:.55;
     }
     :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::after{
-      content:""; position:absolute; top:-35%; left:-45%; width:40%; height:170%;
+      content:"";position:absolute;top:-35%;left:-45%;width:40%;height:170%;
       background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.5) 45%, rgba(255,255,255,0) 100%);
-      transform: translateX(-120%) rotate(15deg); pointer-events:none; filter: blur(2px);
+      transform: translateX(-120%) rotate(15deg);pointer-events:none;filter: blur(2px);
       transition: transform .6s ease;
     }
     :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):hover::after{ transform: translateX(130%) rotate(15deg); }
@@ -67,55 +64,86 @@
       filter:brightness(1.06);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 14px 28px rgba(16, 90, 78, .34), 0 3px 10px rgba(0,0,0,.32);
     }
-    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):active{ transform:translateY(1px); box-shadow:
-      inset 0 1px 0 rgba(255,255,255,.2), 0 8px 16px rgba(16, 90, 78, .28), 0 2px 6px rgba(0,0,0,.32); }
-    :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn):focus-visible{
-      outline:0; box-shadow: 0 0 0 3px color-mix(in oklab, var(--btn-focus) 65%, transparent),
-      inset 0 1px 0 rgba(255,255,255,.28), 0 12px 26px rgba(16, 90, 78, .32);
-    }
-    .btn.sm{ padding:.65rem .9rem; border-radius:12px; font-weight:650; }
-    .btn.lg{ padding:1.05rem 1.25rem; border-radius:16px; font-size:1.05rem; }
-    .btn.block{ display:flex; width:100% }
-    .btn[aria-disabled="true"], .btn:disabled{ cursor:not-allowed; opacity:.6; filter:saturate(.7) contrast(.95); transform:none;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 4px 10px rgba(0,0,0,.22); }
-    a.btn[aria-disabled="true"]{ pointer-events:none }
+    .btn[aria-disabled="true"], .btn:disabled{ cursor:not-allowed; opacity:.6; filter:saturate(.7) contrast(.95); transform:none; }
+    .btn-wa{ background: linear-gradient(135deg, #25D366, #1ebe57) !important; border-color:#25D366 !important; color:#fff !important; text-shadow:0 1px 0 rgba(0,0,0,.15); }
+
+    /* Hero text smaller + semi-transparent  */
+    .hero .hero-inner h1{ font-size:clamp(1.9rem,3.2vw,2.5rem); color:rgba(255,255,255,.9); font-weight:800; }
+    .hero .hero-inner p{ font-size:clamp(1rem,1.6vw,1.15rem); color:rgba(230,242,238,.82); }
+    .hero .kicker{ color:rgba(209,143,0,.9); letter-spacing:.16em; }
+
+    /* Bigger notes area */
+    #dmtForm textarea[name="notes"]{ min-height:240px; }
+
+    /* Error ribbon + helpers */
+    .ribbon-error{ display:none; background:linear-gradient(180deg,#ff4d4f,var(--danger)); color:#fff; border:1px solid var(--danger-2); border-radius:.75rem; padding:.75rem 1rem; margin:0 0 .9rem 0; font-weight:800; box-shadow:0 10px 18px rgba(193,18,31,.22), inset 0 1px 0 rgba(255,255,255,.22); }
+    .ribbon-error.show{ display:block; }
+    .field-error{ border-color:var(--danger)!important; background:#fff; }
+    .help-error{ display:none; color:var(--danger); background:var(--danger-soft); border:1px solid #ffd1d6; padding:.5rem .6rem; border-radius:.5rem; margin-top:.4rem; font-weight:600; }
+    .help-error.show{ display:block; }
+
+    /* Gallery masonry (works great for portrait shots) */
+    .gallery { columns: 4 240px; column-gap:.75rem; }
+    .gallery figure{ break-inside:avoid; margin:0 0 .75rem; overflow:hidden; border-radius:.75rem; border:1px solid var(--border-dark, #1c5947); }
+    .gallery img{ width:100%; height:auto; display:block; }
+
     @media (prefers-reduced-motion: reduce){
       :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn){ transition:none }
       :where(a.btn,button.btn,input[type="button"].btn,input[type="submit"].btn)::after{ display:none }
     }
   </style>
 
-  <!-- Social preview -->
+  <!-- OG/Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ranger.LK — Travel Sri Lanka">
   <meta property="og:description" content="Custom tours & holidays in Sri Lanka: wildlife, beaches, hill country & culture.">
   <meta property="og:url" content="https://ranger.lk/">
-  <meta property="og:image" content="./public/assets/og-cover.jpg">
+  <meta property="og:image" content="./og-cover.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Inline asset map -->
-  <script id="ASSETS" type="application/json">
-  {
-    "logoMain": "./public/assets/img/logo.png",
-    "logoFooter": "./public/assets/img/logo.png",
-    "hero": "./public/assets/hero/hero-optimized.jpeg",
-    "destCulturalTriangle": "./public/assets/destinations/adventure-event.png",
-    "destHill": "./public/assets/destinations/dest-hill.png",
-    "destSouth": "./public/assets/destinations/dest-south.png",
-    "destYala": "./public/assets/destinations/dest-yala.png",
-    "destEast": "./public/assets/destinations/dest-east.jpg",
-    "destKandy": "./public/assets/destinations/dest-kandy.png",
-    "itin10": "./public/assets/itineraries/10d.png",
-    "itin7": "./public/assets/itineraries/7d.png",
-    "itin12": "./public/assets/itineraries/12d.png",
-    "gal1": "./public/assets/gallery/1.png",
-    "gal2": "./public/assets/gallery/2.png",
-    "gal3": "./public/assets/gallery/3.jpeg",
-    "gal4": "./public/assets/gallery/4.jpg",
-    "gal5": "./public/assets/gallery/5.png",
-    "gal6": "./public/assets/gallery/6.png"
-  }
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-680TNML6DW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('consent','default',{ ad_storage:'denied', analytics_storage:'granted', ad_user_data:'denied', ad_personalization:'denied', wait_for_update:500 });
+    const isLocal = location.hostname === 'localhost' || location.protocol === 'file:';
+    gtag('config','G-680TNML6DW',{ anonymize_ip:true, allow_google_signals:false, debug_mode:isLocal });
   </script>
+
+  <!-- Pictures defined once (IMPORTANT: gallery now uses 1.jpeg..9.jpeg next to this file) -->
+  <script id="ASSETS" type="application/json">
+{
+  "logoMain": "./public/assets/img/logo.png",
+  "logoFooter": "./public/assets/img/logo.png",
+
+  "hero": "./public/assets/hero/hero-optimized.jpeg",
+
+  "destCulturalTriangle": "./public/assets/destinations/adventure-event.png",
+  "destHill": "./public/assets/destinations/dest-hill.png",
+  "destSouth": "./public/assets/destinations/dest-south.png",
+  "destYala": "./public/assets/destinations/dest-yala.png",
+  "destEast": "./public/assets/destinations/dest-east.jpg",
+  "destKandy": "./public/assets/destinations/dest-kandy.png",
+
+  "itin10": "./public/assets/itineraries/10d.png",
+  "itin7":  "./public/assets/itineraries/7d.png",
+  "itin12": "./public/assets/itineraries/12d.png",
+
+  "gal1": "./public/assets/gallery/1.jpeg",
+  "gal2": "./public/assets/gallery/2.jpeg",
+  "gal3": "./public/assets/gallery/3.jpeg",
+  "gal4": "./public/assets/gallery/4.jpeg",
+  "gal5": "./public/assets/gallery/5.jpeg",
+  "gal6": "./public/assets/gallery/6.jpeg",
+  "gal7": "./public/assets/gallery/7.jpeg",
+  "gal8": "./public/assets/gallery/8.jpeg",
+  "gal9": "./public/assets/gallery/9.jpeg"
+}
+</script>
+
+
 </head>
 
 <body data-whatsapp-number="94776771171">
@@ -136,7 +164,7 @@
           <a role="menuitem" href="#itineraries">Itineraries</a>
           <a role="menuitem" href="#gallery">Gallery</a>
           <a role="menuitem" href="#design">Design my trip</a>
-          <a role="menuitem" class="btn" href="#design">Start now</a>
+          <a role="menuitem" class="btn btn-wa" href="#" id="waCtaHeader" aria-label="Book your trip on WhatsApp">WhatsApp Me</a>
         </div>
       </nav>
     </div>
@@ -148,7 +176,7 @@
     <img class="hero-img" data-asset="hero" alt="Ziplining through Sri Lanka's lush hills" loading="eager" decoding="async" fetchpriority="high">
     <div class="hero-inner">
       <div class="kicker">Sri Lanka • Travel • Holidays</div>
-      <h1>Discover Sri Lanka — beaches, wildlife, tea country & culture</h1>
+      <h1>Discover Sri Lanka — Beaches, Wildlife, Train Rides, Tea country & Culture</h1>
       <p>Crafted by local experts. From leopard safaris and scenic trains to UNESCO wonders and palm-fringed coasts. Travel better, travel responsibly.</p>
       <div class="hero-cta">
         <a class="btn" href="#destinations">Explore destinations</a>
@@ -167,7 +195,7 @@
           <div class="media"><img loading="lazy" data-asset="destCulturalTriangle" alt="Sigiriya rock fortress at sunset"></div>
           <div class="body">
             <h3>Cultural Triangle</h3>
-            <p>Sigiriya, Dambulla and Polonnaruwa — ancient capitals, cave temples and wildlife plains.</p>
+            <p>Anuradhapura, Polonnaruwa, Sigiriya &amp; Dambulla — ancient capitals, cave temples and wildlife plains.</p>
             <div class="meta"><span class="tag">Heritage</span><span class="tag">Wildlife</span></div>
           </div>
           <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Cultural Triangle Highlights" href="#design">Design this trip</a></div>
@@ -177,7 +205,7 @@
           <div class="media"><img loading="lazy" data-asset="destHill" alt="Tea fields and a blue train in hill country"></div>
           <div class="body">
             <h3>Hill Country</h3>
-            <p>Ella & Nuwara Eliya — misty tea trails, waterfalls and the island’s most scenic train ride.</p>
+            <p>Ella &amp; Nuwara Eliya — misty tea trails, waterfalls and the island’s most scenic train ride.</p>
             <div class="meta"><span class="tag">Train</span><span class="tag">Hikes</span></div>
           </div>
           <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Hill Country Escape" href="#design">Design this trip</a></div>
@@ -196,7 +224,7 @@
         <article class="card dest">
           <div class="media"><img loading="lazy" data-asset="destYala" alt="Leopard in Yala National Park"></div>
           <div class="body">
-            <h3>Yala & Wilpattu</h3>
+            <h3>Yala &amp; Wilpattu</h3>
             <p>Iconic national parks — leopards, elephants and diverse birdlife with ethical guiding.</p>
             <div class="meta"><span class="tag">Safari</span><span class="tag">Birding</span></div>
           </div>
@@ -207,7 +235,7 @@
           <div class="media"><img loading="lazy" data-asset="destEast" alt="Turquoise bay in Trincomalee"></div>
           <div class="body">
             <h3>East Coast</h3>
-            <p>Trincomalee & Arugam Bay — calm bays (May–Sep), snorkelling and world-class surf.</p>
+            <p>Trincomalee &amp; Arugam Bay — calm bays (May–Sep), snorkelling and world-class surf.</p>
             <div class="meta"><span class="tag">Snorkel</span><span class="tag">Surf</span></div>
           </div>
           <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="East Coast Blue" href="#design">Design this trip</a></div>
@@ -216,7 +244,7 @@
         <article class="card dest">
           <div class="media"><img loading="lazy" data-asset="destKandy" alt="Temple of the Tooth in Kandy"></div>
           <div class="body">
-            <h3>Kandy & Knuckles</h3>
+            <h3>Kandy &amp; Knuckles</h3>
             <p>UNESCO heritage, cultural performances and ridge hikes with panoramic views.</p>
             <div class="meta"><span class="tag">Culture</span><span class="tag">Mountains</span></div>
           </div>
@@ -232,9 +260,9 @@
       <div class="grid xp-grid">
         <div class="xp"><div class="icon">🛤️</div><div><h3>Scenic train journeys</h3><p>Ride the famed Kandy–Ella line across tea valleys, viaducts and cloud forests.</p></div></div>
         <div class="xp"><div class="icon">🦁</div><div><h3>Wildlife safaris</h3><p>Seek leopards, elephants and sloth bears with conservation-minded rangers.</p></div></div>
-        <div class="xp"><div class="icon">🏖️</div><div><h3>Beaches & water</h3><p>Snorkel Pigeon Island, watch blue whales in season, or simply unwind on golden sands.</p></div></div>
-        <div class="xp"><div class="icon">🥾</div><div><h3>Hikes & tea trails</h3><p>From Little Adam’s Peak to Horton Plains, choose routes fit for your pace.</p></div></div>
-        <div class="xp"><div class="icon">🕍</div><div><h3>Culture & festivals</h3><p>Witness Kandy Esala Perahera, explore temples, and learn village crafts.</p></div></div>
+        <div class="xp"><div class="icon">🏖️</div><div><h3>Beaches &amp; water</h3><p>Snorkel Pigeon Island, watch blue whales in season, or simply unwind on golden sands.</p></div></div>
+        <div class="xp"><div class="icon">🥾</div><div><h3>Hikes &amp; tea trails</h3><p>From Little Adam’s Peak to Horton Plains, choose routes fit for your pace.</p></div></div>
+        <div class="xp"><div class="icon">🕍</div><div><h3>Culture &amp; festivals</h3><p>Witness Kandy Esala Perahera, explore temples, and learn village crafts.</p></div></div>
         <div class="xp"><div class="icon">🕊️</div><div><h3>Birdwatching</h3><p>Track island endemics with guides who know the calls and habitats.</p></div></div>
       </div>
     </section>
@@ -249,14 +277,14 @@
           <div class="body">
             <h3>Classic Highlights • 10 Days</h3>
             <p>Cultural Triangle → Kandy → Ella (train) → Yala → South Coast. Balanced pace for first-timers.</p>
-            <p class="tag" style="background:#fff6e0;border-color:#ffe2a9;color:#8a5b00;">Great for couples & families</p>
+            <p class="tag" style="background:#fff6e0;border-color:#ffe2a9;color:#8a5b00;">Great for couples &amp; families</p>
           </div>
           <div style="padding:0 1.25rem 1.25rem"><a class="btn" data-package="Classic Highlights 10D" href="#design">Design this trip</a></div>
         </article>
         <article class="card itin">
           <div class="media" style="padding:0"><img loading="lazy" data-asset="itin7" alt="Jeep safari in Yala"></div>
           <div class="body">
-            <h3>Wildlife & Beaches • 7 Days</h3>
+            <h3>Wildlife &amp; Beaches • 7 Days</h3>
             <p>Wilpattu or Yala safaris, then relax on the south coast. Ideal Nov–Apr.</p>
             <p class="tag" style="background:#eef7ff;border-color:#cfe5ff;color:#0f2b46;">Easy pace</p>
           </div>
@@ -265,7 +293,7 @@
         <article class="card itin">
           <div class="media" style="padding:0"><img loading="lazy" data-asset="itin12" alt="Temple and lake in Kandy"></div>
           <div class="body">
-            <h3>Culture & Hills • 12 Days</h3>
+            <h3>Culture &amp; Hills • 12 Days</h3>
             <p>Deep-dive into heritage and tea country with added hikes and village stays.</p>
             <p class="tag" style="background:#efe5e5;border-color:#e6c2b8;color:#7A1E10;">Active travelers</p>
           </div>
@@ -278,24 +306,35 @@
     <section id="design" class="section">
       <div class="container dmt">
         <p class="eyebrow">Design My Trip</p>
-        <h2>Plan & book — send to WhatsApp</h2>
-        <p class="helper">Select a package, pick your date and group size, add notes, then tap <em>Send to WhatsApp</em>. We’ll confirm availability and pricing.</p>
+        <h2>Plan &amp; book — send to WhatsApp</h2>
+        <p class="helper">Choose <strong>start &amp; end dates</strong>, <strong>guests (1–50)</strong>, add your <strong>mobile &amp; email</strong>, type your plan, then tap <em>Send to WhatsApp</em>.</p>
 
         <div class="dmt-grid">
           <!-- Form -->
-          <form id="dmtForm" class="card" style="padding:1.25rem;">
+          <form id="dmtForm" class="card" style="padding:1.25rem;" novalidate>
+            <div id="formError" class="ribbon-error" role="alert" aria-live="assertive" hidden>
+              <strong>⚠️ Please fix this:</strong> <span class="small" id="formErrorMsg">Your email looks wrong. Type it like <em>name@example.com</em>.</span>
+            </div>
+
             <div class="inline">
               <label>
                 <span>Full name</span>
                 <input required type="text" name="name" autocomplete="name" />
               </label>
               <label>
-                <span>Email (optional)</span>
-                <input type="email" name="email" autocomplete="email" />
+                <span>Email</span>
+                <input required type="email" name="email" autocomplete="email" inputmode="email"
+                       pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                       title="Your email looks wrong. Please type it like name@example.com" />
+                <small id="emailHelp" class="help-error" aria-live="polite">Your email looks wrong. Please type it like <b>name@example.com</b>.</small>
               </label>
             </div>
 
             <div class="inline">
+              <label>
+                <span>Mobile (WhatsApp)</span>
+                <input type="tel" name="phone" id="phone" inputmode="tel" placeholder="+94 77 123 4567" pattern="^[+0-9 ()-]{6,20}$" />
+              </label>
               <label>
                 <span>Choose package</span>
                 <select required name="package" id="packageSelect">
@@ -310,37 +349,46 @@
                   <option>East Coast Blue</option>
                 </select>
               </label>
-              <label>
-                <span>Group size</span>
-                <select name="group">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3–4</option>
-                  <option>5–8</option>
-                  <option>8+</option>
-                </select>
-              </label>
             </div>
 
             <div class="inline">
               <label>
-                <span>Start date</span>
-                <input required type="date" name="start" id="startDate" />
+                <span>Number of guests</span>
+                <select required name="guests" id="guestsSelect">
+                  <option value="">Select…</option>
+                  <!-- 1..50 -->
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                  <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                  <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                  <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                  <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                  <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+                  <option>31</option><option>32</option><option>33</option><option>34</option><option>35</option>
+                  <option>36</option><option>37</option><option>38</option><option>39</option><option>40</option>
+                  <option>41</option><option>42</option><option>43</option><option>44</option><option>45</option>
+                  <option>46</option><option>47</option><option>48</option><option>49</option><option>50</option>
+                </select>
               </label>
               <label>
-                <span>Nights</span>
-                <input required type="number" name="nights" id="nights" min="1" max="60" value="7" />
+                <span>Start date</span>
+                <input required type="date" name="start" id="startDate" />
+                <small id="dateHelpStart" class="help-error" aria-live="polite">Start day must be earlier than the End day.</small>
+              </label>
+              <label>
+                <span>End date</span>
+                <input required type="date" name="end" id="endDate" />
+                <small id="dateHelpEnd" class="help-error" aria-live="polite">End day must be after the Start day.</small>
               </label>
             </div>
 
             <label>
-              <span>Notes</span>
-              <textarea name="notes" placeholder="Must-see places, budget range, hotel style, dietary needs…"></textarea>
+              <span>Your trip ideas / notes</span>
+              <textarea name="notes" placeholder="Tell us everything: must-see places, budget range, hotel style, dietary needs, children’s ages, special occasions, preferred pace…"></textarea>
             </label>
 
             <div style="display:flex; gap:.75rem; align-items:center; margin-top:.5rem; flex-wrap:wrap;">
               <button class="btn" type="submit">Preview details</button>
-              <button id="sendWA" class="btn" type="button" aria-disabled="true" disabled>Send to WhatsApp</button>
+              <button id="sendWA" class="btn btn-wa" type="button" aria-disabled="true" disabled>Send to WhatsApp</button>
               <span class="helper">WhatsApp will open with your trip details pre-filled.</span>
             </div>
           </form>
@@ -350,8 +398,9 @@
             <h3 style="margin-top:0; color:#fff;">Your trip summary</h3>
             <div class="row"><span>Package</span><strong id="sPkg">—</strong></div>
             <div class="row"><span>Dates</span><strong id="sDates">—</strong></div>
-            <div class="row"><span>Group</span><strong id="sGroup">—</strong></div>
+            <div class="row"><span>Guests</span><strong id="sGuests">—</strong></div>
             <div class="row"><span>Nights</span><strong id="sNights">—</strong></div>
+            <div class="row"><span>Mobile</span><strong id="sPhone">—</strong></div>
             <div class="row" style="align-items:start"><span>Notes</span><strong id="sNotes" style="max-width:60ch; text-align:right; font-weight:500; color:#e1efe9;">—</strong></div>
           </aside>
         </div>
@@ -374,17 +423,20 @@
       </div>
     </section>
 
-    <!-- Gallery -->
+    <!-- Gallery (now using your 1.jpeg … 9.jpeg files) -->
     <section id="gallery" class="section container">
       <p class="eyebrow">Gallery</p>
       <h2>Inspiration</h2>
       <div class="gallery" aria-label="Photo gallery">
-        <figure><img loading="lazy" data-asset="gal1" alt="Nine Arches Bridge with blue train" width="800" height="600"></figure>
-        <figure><img loading="lazy" data-asset="gal2" alt="Galle lighthouse at golden hour" width="800" height="600"></figure>
-        <figure><img loading="lazy" data-asset="gal3" alt="Snorkelling over coral reef" width="800" height="600"></figure>
-        <figure><img loading="lazy" data-asset="gal4" alt="Leopard on a tree" width="800" height="600"></figure>
-        <figure><img loading="lazy" data-asset="gal5" alt="Tea picker in emerald fields" width="800" height="600"></figure>
-        <figure><img loading="lazy" data-asset="gal6" alt="Sigiriya from the water gardens" width="800" height="600"></figure>
+        <figure><img loading="lazy" data-asset="gal1" alt="Event & meetings showcase — Sri Lanka MICE"></figure>
+        <figure><img loading="lazy" data-asset="gal2" alt="Networking at conference — partners and buyers"></figure>
+        <figure><img loading="lazy" data-asset="gal3" alt="Selfie with delegate — vibrant venue"></figure>
+        <figure><img loading="lazy" data-asset="gal4" alt="Team at expo stage — flags backdrop"></figure>
+        <figure><img loading="lazy" data-asset="gal5" alt="White-water rafting for MICE groups"></figure>
+        <figure><img loading="lazy" data-asset="gal6" alt="Knuckles Range — hiking experiences"></figure>
+        <figure><img loading="lazy" data-asset="gal7" alt="Ranger.LK — MICE experience partner"></figure>
+        <figure><img loading="lazy" data-asset="gal8" alt="Bird watching tours — endemic species"></figure>
+        <figure><img loading="lazy" data-asset="gal9" alt="Why choose Ranger.LK — highlights"></figure>
       </div>
     </section>
 
@@ -394,7 +446,7 @@
       <h2>Good to know</h2>
       <details>
         <summary>When is the best time to visit?</summary>
-        <p>Nov–Apr is best for the south & west coasts and hill country; May–Sep shines on the east coast. We tailor routes to seasons.</p>
+        <p>Nov–Apr is best for the south &amp; west coasts and hill country; May–Sep shines on the east coast. We tailor routes to seasons.</p>
       </details>
       <details>
         <summary>Can trips be customised?</summary>
@@ -415,7 +467,7 @@
           <img data-asset="logoFooter" alt="Ranger.LK logo small" width="40" height="40" />
           <span>Ranger.LK</span>
         </div>
-        <p>Custom tours & holidays across Sri Lanka. Local expertise, ethical partners, transparent pricing.</p>
+        <p>Custom tours &amp; holidays across Sri Lanka. Local expertise, ethical partners, transparent pricing.</p>
       </div>
       <div>
         <h3>Explore</h3>
@@ -427,12 +479,11 @@
         </ul>
       </div>
       <div>
-        <h3>Company</h3>
+        <h3>Contact</h3>
         <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.35rem;">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Press</a></li>
+          <li><a href="mailto:info@ranger.lk">info@ranger.lk</a></li>
+          <li><a href="https://wa.me/94776771171" target="_blank" rel="noopener">WhatsApp: +94 77 677 1171</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Instagram: @ranger.lk</a></li>
         </ul>
       </div>
       <div>
@@ -445,13 +496,13 @@
       </div>
     </div>
     <div class="container copyright">
-      <span>© <span id="year"></span> Ranger.LK. All rights reserved.</span>
+      <span>© <span id="year"></span> Ranger.LK is a brand of Eco Adventures Lanka (Pvt) Ltd. All rights reserved.</span>
     </div>
   </footer>
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Ranger.LK","url":"https://ranger.lk/","logo":"https://ranger.lk/assets/logo.png","sameAs":["https://www.instagram.com/ranger.lk/"]}
+  {"@context":"https://schema.org","@type":"Organization","name":"Ranger.LK","url":"https://ranger.lk/","logo":"https://ranger.lk/assets/logo.png","email":"mailto:info@ranger.lk","contactPoint":[{"@type":"ContactPoint","contactType":"customer support","email":"info@ranger.lk","telephone":"+94 776771171","areaServed":"LK"}],"sameAs":["https://www.instagram.com/ranger.lk/"]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"WebSite","url":"https://ranger.lk/","potentialAction":{"@type":"SearchAction","target":"https://ranger.lk/search?q={search_term_string}","query-input":"required name=search_term_string"}}
@@ -459,7 +510,7 @@
 
   <!-- JS (inline, file:// friendly) -->
   <script type="module">
-    // Hydrate <img data-asset="..."> using inline #ASSETS map
+    // Hydrate images from ASSETS map
     (() => {
       let map = {};
       try { const el = document.getElementById('ASSETS'); if (el) map = JSON.parse(el.textContent || '{}'); } catch(_) {}
@@ -468,56 +519,217 @@
       });
     })();
 
-    // Mobile nav toggle + footer year
+    const WHATSAPP_NUMBER = document.body.dataset.whatsappNumber || '';
+
+    // Mobile nav & year
     const menuBtn = document.getElementById('menuBtn');
     const menu = document.getElementById('menu');
     menuBtn?.addEventListener('click', () => {
       const open = menu.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', String(open));
     });
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Design My Trip logic
+    // Header CTA
+    document.getElementById('waCtaHeader')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      const msg = encodeURIComponent("Hello Ranger.LK, I'd like to book my trip.");
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank', 'noopener');
+    });
+
+    // Helpers
+    const toISO = (d) => d.toISOString().slice(0,10);
+    const addDays = (iso, n) => { const d = new Date(iso + 'T00:00:00'); d.setDate(d.getDate() + n); return toISO(d); };
+    const nightsBetween = (startISO, endISO) => {
+      if (!startISO || !endISO) return 0;
+      const s = new Date(startISO + 'T00:00:00');
+      const e = new Date(endISO + 'T00:00:00');
+      const ms = e - s;
+      return ms > 0 ? Math.round(ms / 86400000) : 0;
+    };
+    const fmtDate = (iso) => {
+      if (!iso) return '';
+      const d = new Date(iso + 'T00:00:00');
+      return d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+    };
+
+    // Banner helpers
+    const banner      = document.getElementById('formError');
+    const bannerMsg   = document.getElementById('formErrorMsg');
+    const showBanner  = (msg) => { bannerMsg.textContent = msg; banner.hidden = false; banner.classList.add('show'); };
+    const hideBanner  = () => { banner.hidden = true; banner.classList.remove('show'); };
+
+    // DMT logic + validation
     const form = document.getElementById('dmtForm');
     if (form) {
-      const sPkg = document.getElementById('sPkg');
-      const sDates = document.getElementById('sDates');
-      const sGroup = document.getElementById('sGroup');
+      const sPkg    = document.getElementById('sPkg');
+      const sDates  = document.getElementById('sDates');
+      const sGuests = document.getElementById('sGuests');
       const sNights = document.getElementById('sNights');
-      const sNotes = document.getElementById('sNotes');
-      const startDateEl = document.getElementById('startDate');
-      const pkgSelect = document.getElementById('packageSelect');
-      const sendWA = document.getElementById('sendWA');
-      const WHATSAPP_NUMBER = document.body.dataset.whatsappNumber || '';
+      const sNotes  = document.getElementById('sNotes');
+      const sPhone  = document.getElementById('sPhone');
 
-      const formatDate = (iso) => {
-        if (!iso) return '';
-        const d = new Date(iso + 'T00:00:00');
-        return d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+      const startDateEl = document.getElementById('startDate');
+      const endDateEl   = document.getElementById('endDate');
+      const pkgSelect   = document.getElementById('packageSelect');
+      const emailEl     = form.querySelector('input[name="email"]');
+      const emailHelp   = document.getElementById('emailHelp');
+      const dateHelpStart = document.getElementById('dateHelpStart');
+      const dateHelpEnd   = document.getElementById('dateHelpEnd');
+      const sendWA      = document.getElementById('sendWA');
+
+      // date guards
+      const todayISO = toISO(new Date());
+      if (startDateEl) startDateEl.min = todayISO;
+      if (endDateEl)   endDateEl.min   = todayISO;
+
+      const syncEndMinToStart = () => {
+        const s = startDateEl.value;
+        if (!s) return;
+        const minEnd = addDays(s, 1);
+        endDateEl.min = minEnd;
+        if (!endDateEl.value || endDateEl.value < minEnd) endDateEl.value = minEnd;
       };
-      const addDays = (dateISO, days) => {
-        const d = new Date(dateISO + 'T00:00:00');
-        d.setDate(d.getDate() + Number(days));
-        return d.toISOString().slice(0,10);
+
+      const clearDateErrors = () => {
+        [startDateEl, endDateEl].forEach(el => { el.classList.remove('field-error'); el.removeAttribute('aria-invalid'); el.setCustomValidity(''); });
+        dateHelpStart.classList.remove('show');
+        dateHelpEnd.classList.remove('show');
       };
-      const updateSummary = () => {
+
+      const showDateErrors = () => {
+        startDateEl.classList.add('field-error'); startDateEl.setAttribute('aria-invalid','true');
+        endDateEl.classList.add('field-error');   endDateEl.setAttribute('aria-invalid','true');
+        dateHelpStart.textContent = 'Start day must be earlier than the End day. Please change the dates.';
+        dateHelpEnd.textContent   = 'End day must be after the Start day. Please change the dates.';
+        dateHelpStart.classList.add('show');
+        dateHelpEnd.classList.add('show');
+        endDateEl.setCustomValidity('End date must be after Start date.');
+        showBanner('Start day must be earlier than the End day of your trip. Please change the dates.');
+      };
+
+      const validateDates = () => {
+        const s = startDateEl.value;
+        const e = endDateEl.value;
+        clearDateErrors();
+        if (!s || !e) { return false; }
+        const start = new Date(s + 'T00:00:00');
+        const end   = new Date(e + 'T00:00:00');
+        const ok = end > start;
+        if (!ok) showDateErrors(); else { endDateEl.setCustomValidity(''); hideBanner(); }
+        return ok;
+      };
+
+      startDateEl.addEventListener('change', () => { syncEndMinToStart(); validateDates(); updateSummary(); });
+      endDateEl.addEventListener('change',   () => { validateDates(); updateSummary(); });
+      startDateEl.addEventListener('blur', validateDates);
+      endDateEl.addEventListener('blur', validateDates);
+
+      // email validation (simple + typo hints)
+      const TYPO_MAP = {
+        'gmial.com':'gmail.com','gmai.com':'gmail.com','gmal.com':'gmail.com','gmail.co':'gmail.com',
+        'yaho.com':'yahoo.com','yahoo.co':'yahoo.com',
+        'hotmial.com':'hotmail.com','hotnail.com':'hotmail.com','hotmai.com':'hotmail.com',
+        'outlok.com':'outlook.com','outllok.com':'outlook.com',
+        'icloud.co':'icloud.com'
+      };
+      const suggestDomainFix = (domain) => TYPO_MAP[domain.toLowerCase()] || '';
+      const basicDomainOK = (domain) => {
+        if (!domain || !domain.includes('.')) return false;
+        const parts = domain.split('.');
+        if (parts.some(p => !p)) return false;
+        const tld = parts.pop();
+        if (tld.length < 2) return false;
+        const labelOK = s => /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i.test(s);
+        return parts.every(labelOK) && labelOK(tld);
+      };
+      const showEmailError = (msg) => {
+        emailEl.classList.add('field-error');
+        emailEl.setAttribute('aria-invalid','true');
+        emailEl.setCustomValidity(msg);
+        emailHelp.textContent = msg;
+        emailHelp.classList.add('show');
+        showBanner(msg);
+      };
+      const hideEmailError = () => {
+        emailEl.classList.remove('field-error');
+        emailEl.removeAttribute('aria-invalid');
+        emailEl.setCustomValidity('');
+        emailHelp.classList.remove('show');
+        hideBanner();
+      };
+      const validateEmail = (silent=false) => {
+        const val = (emailEl.value || '').trim();
+        if (!val){
+          if (!silent) showEmailError('Please type your email address. For example: name@example.com');
+          return false;
+        }
+        const syntaxOK = emailEl.checkValidity ? emailEl.checkValidity()
+                         : /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val);
+        if (!syntaxOK){
+          if (!silent) showEmailError('Your email looks wrong. Please type it like name@example.com');
+          return false;
+        }
+        const domain = val.split('@')[1] || '';
+        if (!basicDomainOK(domain)){
+          const hint = suggestDomainFix(domain);
+          if (!silent) {
+            showEmailError(hint ? `Your email domain looks off. Did you mean: ${hint} ?`
+                                : 'The part after “@” looks wrong. Please check it.');
+          }
+          return false;
+        }
+        const hint = suggestDomainFix(domain);
+        if (hint && !silent){ showBanner(`Did you mean: ${val.split('@')[0]}@${hint} ?`); } else { hideBanner(); }
+        hideEmailError();
+        return true;
+      };
+
+      emailEl.addEventListener('input', () => {
+        hideEmailError();
+        if (emailEl.value.includes('@')) validateEmail(true);
+        updateSummary();
+      });
+      emailEl.addEventListener('blur', () => { validateEmail(); updateSummary(); });
+      emailEl.addEventListener('invalid', (e) => { e.preventDefault(); validateEmail(); });
+
+      // summary + readiness
+      function updateSummary(){
         const fd = new FormData(form);
-        const p = fd.get('package') || '—';
-        const g = fd.get('group') || '—';
-        const n = fd.get('nights') || '—';
-        const s = fd.get('start');
-        const e = s && n ? addDays(s, n) : '';
-        sPkg.textContent = p; sGroup.textContent = g; sNights.textContent = n;
-        sNotes.textContent = (fd.get('notes') || '—').toString();
-        sDates.textContent = s ? `${formatDate(s)}${e ? ' → ' + formatDate(e) : ''}` : '—';
-        const ready = fd.get('name') && fd.get('package') && fd.get('start') && fd.get('nights');
-        sendWA.disabled = !ready; sendWA.setAttribute('aria-disabled', String(!ready));
-      };
+        const pack   = (fd.get('package') || '—').toString();
+        const guests = (fd.get('guests')  || '—').toString();
+        const start  = (fd.get('start')   || '').toString();
+        const end    = (fd.get('end')     || '').toString();
+        const notes  = (fd.get('notes')   || '—').toString();
+        const phone  = (fd.get('phone')   || '—').toString();
+
+        const nights = nightsBetween(start, end);
+        sPkg.textContent    = pack;
+        sGuests.textContent = guests;
+        sNotes.textContent  = notes;
+        sPhone.textContent  = phone;
+        sNights.textContent = nights ? String(nights) : '—';
+        sDates.textContent  = (start && end) ? `${fmtDate(start)} → ${fmtDate(end)}` : '—';
+
+        const emailOK = validateEmail(true);
+        const dateOK  = validateDates();
+        const ready = fd.get('name') && fd.get('package') && fd.get('guests') && start && end && nights > 0 && emailOK && dateOK;
+        const sendWA = document.getElementById('sendWA');
+        sendWA.disabled = !ready;
+        sendWA.setAttribute('aria-disabled', String(!ready));
+      }
+
       form.addEventListener('input', updateSummary);
       form.addEventListener('change', updateSummary);
-      form.addEventListener('submit', e => { e.preventDefault(); updateSummary(); });
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const okEmail = validateEmail();
+        const okDates = validateDates();
+        updateSummary();
+        if (!okEmail || !okDates || !form.checkValidity()) { form.reportValidity(); return; }
+      });
 
+      // Prefill package
       document.querySelectorAll('[data-package]')?.forEach(btn => {
         btn.addEventListener('click', () => {
           const val = btn.getAttribute('data-package');
@@ -525,23 +737,38 @@
         });
       });
 
-      sendWA?.addEventListener('click', () => {
+      // Send to WhatsApp
+      document.getElementById('sendWA')?.addEventListener('click', () => {
+        if (!validateEmail() || !validateDates() || !form.checkValidity()) { form.reportValidity(); return; }
         const fd = new FormData(form);
-        const name = fd.get('name') || '';
-        const email = fd.get('email') || '';
-        const pack = fd.get('package') || '';
-        const start = fd.get('start') || '';
-        const nights = fd.get('nights') || '';
-        const group = fd.get('group') || '';
-        const notes = fd.get('notes') || '';
-        const end = start && nights ? addDays(start, nights) : '';
-        const msg = `Hello Ranger.LK,%0A%0AI'd like to design a trip:%0A• Name: ${encodeURIComponent(name)}%0A• Package: ${encodeURIComponent(pack)}%0A• Dates: ${encodeURIComponent(formatDate(start))}${end?` → ${encodeURIComponent(formatDate(end))}`:''}%0A• Nights: ${encodeURIComponent(nights)}%0A• Group: ${encodeURIComponent(group)}%0A• Email: ${encodeURIComponent(email)}%0A• Notes: ${encodeURIComponent(notes)}%0A%0A(Generated from website)`;
-        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
-        window.open(url, '_blank', 'noopener');
+        const name   = (fd.get('name') || '').toString();
+        const email  = (fd.get('email') || '').toString();
+        const phone  = (fd.get('phone') || '').toString();
+        const pack   = (fd.get('package') || '').toString();
+        const guests = (fd.get('guests')  || '').toString();
+        const start  = (fd.get('start')   || '').toString();
+        const end    = (fd.get('end')     || '').toString();
+        const nights = nightsBetween(start, end);
+        const notes  = (fd.get('notes')   || '').toString();
+
+        const msg =
+          `Hello Ranger.LK,%0A%0A` +
+          `I'd like to book my trip:%0A` +
+          `• Name: ${encodeURIComponent(name)}%0A` +
+          `• Mobile: ${encodeURIComponent(phone)}%0A` +
+          `• Email: ${encodeURIComponent(email)}%0A` +
+          `• Package: ${encodeURIComponent(pack)}%0A` +
+          `• Dates: ${encodeURIComponent(fmtDate(start))} → ${encodeURIComponent(fmtDate(end))}%0A` +
+          `• Nights: ${encodeURIComponent(String(nights))}%0A` +
+          `• Guests: ${encodeURIComponent(guests)}%0A` +
+          `• Notes: ${encodeURIComponent(notes)}%0A%0A(Generated from website)`;
+
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank', 'noopener');
       });
 
-      const todayISO = new Date().toISOString().slice(0,10);
-      if (startDateEl) startDateEl.min = todayISO;
+      // boot
+      syncEndMinToStart();
+      updateSummary();
     }
   </script>
 </body>
